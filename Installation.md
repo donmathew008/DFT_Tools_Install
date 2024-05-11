@@ -1,3 +1,132 @@
 # Installation of different DFT Tools in Ubuntu(here Ubuntu 22.04)
-## BURAI
+## $\color{Green}{\textbf{Prerequisites for all Packages/ Preparing the environment}}$
+```diff
+sudo apt install build-essential gfortran
+```
+```diff
+sudo apt install libopenmpi-dev openmpi-bin
+```
+```diff
+sudo apt install libblas-dev liblapack-dev libscalapack-mpi-dev
+```
+```diff
+sudo apt install libhdf5-dev libhdf5-mpi-dev libnetcdf-dev libnetcdff-dev netcdf-bin
+```
+```diff
+sudo apt install readline-common
+```
+```diff
+sudo apt install curl wget
+```
+```diff
+sudo apt install diffutils patch
+```
+```diff
+sudo apt-get install openjdk-8-jdk
+```
+```diff
+sudo apt-get install openjfx
+```
 
+
+
+## $\color{Violet}{\textbf{1. BURAI}}$
+### Download the "BURAI1.3_Linux.tgz" from the link given below
+[Download](https://github.com/BURAI-team/burai/releases/download/ver.1.3-linux/BURAI1.3_Linux.tgz)
+### Open the Downloads folder in terminal
+### Unzip the file either using the command line (OR just extract directly)
+```diff
+tar -xvzf BURAI1.3_Linux.tgz
+```
+```diff
+cd BURAI1.3/bin
+```
+### Check for "burai.jar" using ls command
+### Execute the file by
+```diff
+java -jar burai.jar
+```
+### It should open the GUI
+#### $\color{Red}{\textbf{Possible error: No structure visualisation is shown. NB: Run this iff no structure is shown else go to next step creating Desktop shortcut}}$
+```diff
+java -Dprism.forceGPU=true -jar burai.jar
+```
+### To create a Desktop shortcut
+```diff
+cd ..
+```
+```diff
+./makeLauncher.sh
+```
+
+## $\color{Violet}{\textbf{2. SIESTA}}$
+[Reference](https://docs.siesta-project.org/projects/siesta/en/latest/installation/legacy-build.html)
+```diff
+wget https://gitlab.com/siesta-project/siesta/-/releases/v4.1.5/downloads/siesta-4.1.5.tar.gz
+```
+```diff
+tar xvzf siesta-4.1.5.tar.gz
+```
+```diff
+cd siesta-4.1.5
+```
+```diff
+cd Obj
+```
+```diff
+cp gfortran.make arch.make
+```
+#### $\color{Red}{\textbf{Possible error: Running the "sh ../Src/obj setup.sh" will give a mismatch error so we will edit the "arch.make" file using vi editor}}$
+[Reference](https://sites.google.com/arunphy.org/website1/for-students-of-physics/querries-of-learners/siesta)
+```diff
+vi arch.make
+```
+### Enter insert mode by pressing "i" and locate and replace the line
+```diff
+FFLAGS = -O2 -fPIC -ftree-vectorize 
+```
+### with
+```diff
+FFLAGS = -O2 -fPIC -ftree-vectorize -w -fallow-argument-mismatch -O2
+```
+### Then run the following
+```diff
+sh ../Src/obj_setup.sh
+```
+```diff
+make
+```
+```diff
+cd ..
+```
+```diff
+cd Util
+```
+```diff
+./build_all.sh
+```
+### Copy siesta to usr/local/bin
+```diff
+cd ..
+```
+```diff
+cd Obj
+```
+### check for "siesta"
+```diff
+ls si*
+```
+```diff
+sudo cp siesta /usr/local/bin/
+```
+### Checking
+### Run 
+```diff
+./siesta
+```
+from Obj folder
+### OR
+```diff
+sudo ./siesta
+```
+### from usr/local/bin folder

@@ -25,6 +25,10 @@ sudo apt install curl wget
 ```diff
 sudo apt install diffutils patch
 ```
+### All can be done together as follows(Even though NOT Recommended due to errors in troubleshooting)
+```diff
+sudo apt install -y build-essential gfortran libopenmpi-dev openmpi-bin libblas-dev liblapack-dev libscalapack-mpi-dev libhdf5-dev libhdf5-mpi-dev libnetcdf-dev libnetcdff-dev netcdf-bin readline-common curl wget diffutils patch
+```
 ### Download the "BURAI1.3_Linux.tgz" from the link given below
 [Download](https://github.com/BURAI-team/burai/releases/download/ver.1.3-linux/BURAI1.3_Linux.tgz)
 ### Open the Downloads folder in terminal
@@ -178,6 +182,10 @@ pip install vtk
 ```
 ```diff
 pip install pytest
+```
+### All can be done together as follows(Even though NOT Recommended due to errors in troubleshooting)
+```diff
+pip install numpy scipy spglib NetCDF4 ASE colorama pyFFTW vtk pytest
 ```
 ```diff
 sudo apt install python3-pip

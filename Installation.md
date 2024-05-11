@@ -68,10 +68,7 @@ wget https://gitlab.com/siesta-project/siesta/-/releases/v4.1.5/downloads/siesta
 tar xvzf siesta-4.1.5.tar.gz
 ```
 ```diff
-cd siesta-4.1.5
-```
-```diff
-cd Obj
+cd siesta-4.1.5/Obj
 ```
 ```diff
 cp gfortran.make arch.make
@@ -141,7 +138,7 @@ cd Downloads/serb-workshop/files/gold/fcc
 ```
 ### Where we can see three files "Au.psf", "EVSLATT.sh", "gold.fdf", out of which "gold.fdf" is the input file and "EVSLATT.sh" is the executable file
 
-### The siesta_par is to be replaced with siesta in the "EVSLATT.sh" and to make it executable from terminal
+### The siesta_par is to be replaced with siesta(edited file is given in the repository) in the "EVSLATT.sh" and to make it executable from terminal
 ```diff
 chmod +x EVSLATT.sh
 ```

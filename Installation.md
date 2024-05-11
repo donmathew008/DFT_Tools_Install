@@ -89,6 +89,7 @@ FFLAGS = -O2 -fPIC -ftree-vectorize
 ```diff
 FFLAGS = -O2 -fPIC -ftree-vectorize -w -fallow-argument-mismatch -O2
 ```
+### save and exit by ":wq" after pressing Esc key
 ### Then run the following
 ```diff
 sh ../Src/obj_setup.sh

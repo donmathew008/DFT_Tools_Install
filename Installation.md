@@ -191,6 +191,7 @@ pip3 install boltztrap2
 ```
 
 ## $\color{Violet}{\textbf{4. ORCA}}$
+[Reference](https://orcaforum.kofo.mpg.de/app.php/dlext/?sid=214e8ecd094649b921d2ca62bad3a384)
 ## $\color{Violet}{\textbf{5. WIEN2k}}$
-
+[Reference](http://susi.theochem.tuwien.ac.at/)
 

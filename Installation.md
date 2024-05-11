@@ -76,7 +76,7 @@ cd Obj
 ```diff
 cp gfortran.make arch.make
 ```
-#### $\color{Red}{\textbf{Possible error: Running the "sh ../Src/obj setup.sh" will give a mismatch error so we will edit the "arch.make" file using vi editor}}$
+#### $\color{Red}{\textbf{Possible error: Running the 'sh ../Src/obj setup.sh' will give a mismatch error so we will edit the `arch.make' file using vi editor}}$
 [Reference](https://sites.google.com/arunphy.org/website1/for-students-of-physics/querries-of-learners/siesta)
 ```diff
 vi arch.make
@@ -131,3 +131,24 @@ from Obj folder
 sudo ./siesta
 ```
 ### from usr/local/bin folder
+
+## $\color{Rhodamine}{\textbf{Executing the first program }}$
+### Download and unzip the files from Dr. Arun Kumar
+[Download](https://drive.google.com/drive/folders/1h2PzQ2V2ALKun7PNkBC8qKw_wR59-hRW)
+### Say it is in the Downloads folder, open a terminal window
+```diff
+cd Downloads/serb-workshop/files/gold/fcc
+```
+### Where we can see three files "Au.psf", "EVSLATT.sh", "gold.fdf", out of which "gold.fdf" is the input file and "EVSLATT.sh" is the executable file
+
+### The siesta_par is to be replaced with siesta in the "EVSLATT.sh" and to make it executable from terminal
+```diff
+chmod +x EVSLATT.sh
+```
+### Finally ececute the file using 
+```dif
+./EVSLATT.sh
+```
+
+
+

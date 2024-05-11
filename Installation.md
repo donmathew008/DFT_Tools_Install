@@ -1,5 +1,9 @@
 # Installation of different DFT Tools in Ubuntu(here Ubuntu 22.04)
-## $\color{Green}{\textbf{Prerequisites for all Packages/ Preparing the environment}}$
+
+
+
+## $\color{Violet}{\textbf{1. BURAI}}$
+## $\color{Green}{\textbf{Prerequisites/ Preparing the environment}}$
 ```diff
 sudo apt install build-essential gfortran
 ```
@@ -21,16 +25,6 @@ sudo apt install curl wget
 ```diff
 sudo apt install diffutils patch
 ```
-```diff
-sudo apt-get install openjdk-8-jdk
-```
-```diff
-sudo apt-get install openjfx
-```
-
-
-
-## $\color{Violet}{\textbf{1. BURAI}}$
 ### Download the "BURAI1.3_Linux.tgz" from the link given below
 [Download](https://github.com/BURAI-team/burai/releases/download/ver.1.3-linux/BURAI1.3_Linux.tgz)
 ### Open the Downloads folder in terminal
@@ -60,6 +54,15 @@ cd ..
 ```
 
 ## $\color{Violet}{\textbf{2. SIESTA}}$
+## $\color{Green}{\textbf{Prerequisites/ Preparing the environment}}$
+```diff
+sudo apt-get install openjdk-8-jdk
+```
+```diff
+sudo apt-get install openjfx
+```
+
+
 [Reference](https://docs.siesta-project.org/projects/siesta/en/latest/installation/legacy-build.html)
 ```diff
 wget https://gitlab.com/siesta-project/siesta/-/releases/v4.1.5/downloads/siesta-4.1.5.tar.gz
@@ -146,6 +149,48 @@ chmod +x EVSLATT.sh
 ```dif
 ./EVSLATT.sh
 ```
+## $\color{Violet}{\textbf{3. BoltzTraP2}}$
+## $\color{Green}{\textbf{Prerequisites/ Preparing the environment}}$
+[Reference](https://boltztrap2y.readthedocs.io/en/latest/BoltzTraP2.html)
+```diff
+pip install numpy
+```
+```diff
+pip install scipy
+```
+```diff
+pip install spglib
+```
+```diff
+pip install NetCDF4
+```
+```diff
+pip install ASE
+```
+```diff
+pip install colorama
+```
+```diff
+pip install pyFFTW
+```
+```diff
+pip install vtk
+```
+```diff
+pip install pytest
+```
+```diff
+sudo apt install python3-pip
+```
+```diff
+sudo apt install cmake
+```
+### Install BoltzTraP2 by
+```diff
+pip3 install boltztrap2
+```
 
+## $\color{Violet}{\textbf{4. ORCA}}$
+## $\color{Violet}{\textbf{5. WIEN2k}}$
 
 

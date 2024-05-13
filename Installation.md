@@ -197,9 +197,43 @@ sudo apt install cmake
 ```diff
 pip3 install boltztrap2
 ```
+## $\color{Violet}{\textbf{4. Avogadro}}$
+## $\color{Green}{\textbf{Prerequisites/ Preparing the environment}}$
+[Reference](https://avogadro.cc/)
 
-## $\color{Violet}{\textbf{4. ORCA}}$
+[Download Qt online installer](https://www.qt.io/download-qt-installer-oss?hsCtaTracking=99d9dd4f-5681-48d2-b096-470725510d34%7C074ddad0-fdef-4e53-8aa8-5e8a876d6ab4)
+```diff
+cd Downloads
+```
+```diff
+chmod +x qt-unified-linux-x64-4.7.0-online.run
+```
+```diff
+./qt-unified-linux-x64-4.7.0-online.run
+```
+### Login to Qt and proceed
+[Download wxWidgets](https://www.wxwidgets.org/downloads/)
+```diff
+tar -xf wxWidgets-3.2.4.tar.bz2
+```
+```diff
+sudo apt install zlib1g -y
+```
+```diff
+sudo apt install zlib1g-dev -y
+```
+```diff
+sudo apt-get install libxml2 -y
+```
+```diff
+sudo apt-get install libxml2-dev -y
+```
+```diff
+sudo apt-get install libcairo2-dev -y
+```
+[Download OpenBabel](https://sourceforge.net/projects/openbabel/files/openbabel/2.4.0/openbabel-openbabel-2-4-0.tar.gz/download)
+## $\color{Violet}{\textbf{5. ORCA}}$
 [Reference](https://orcaforum.kofo.mpg.de/app.php/dlext/?sid=214e8ecd094649b921d2ca62bad3a384)
-## $\color{Violet}{\textbf{5. WIEN2k}}$
+## $\color{Violet}{\textbf{6. WIEN2k}}$
 [Reference](http://susi.theochem.tuwien.ac.at/)
 

@@ -199,9 +199,14 @@ pip3 install boltztrap2
 ```
 ## $\color{Violet}{\textbf{4. Avogadro}}$
 ## $\color{Green}{\textbf{Prerequisites/ Preparing the environment}}$
+### VScode(from ubuntu software) and Anaconda should be installed
 [Reference](https://avogadro.cc/)
 
 [Download Qt online installer](https://www.qt.io/download-qt-installer-oss?hsCtaTracking=99d9dd4f-5681-48d2-b096-470725510d34%7C074ddad0-fdef-4e53-8aa8-5e8a876d6ab4)
+```diff
+sudo apt install libgtk2.0-dev
+sudo apt install libgtk-3-dev
+```
 ```diff
 cd Downloads
 ```
@@ -215,6 +220,23 @@ chmod +x qt-unified-linux-x64-4.7.0-online.run
 [Download wxWidgets](https://www.wxwidgets.org/downloads/)
 ```diff
 tar -xf wxWidgets-3.2.4.tar.bz2
+```
+### Open "Visual Studio Command Prompt" window
+```diff
+cd Downloads/wxWidgets-3.2.4/
+```
+```diff
+mkdir gtk-build
+cd gtk-build/
+../configure
+
+make #for single core
+make -j4 #for 4 core
+
+sudo make install
+sudo ldconfig
+
+
 ```
 ```diff
 sudo apt install zlib1g -y

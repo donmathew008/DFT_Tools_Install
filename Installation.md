@@ -202,7 +202,8 @@ pip3 install boltztrap2
 ### VScode(from ubuntu software) and Anaconda should be installed
 [Reference](https://avogadro.cc/)
 
-[Download Qt online installer](https://www.qt.io/download-qt-installer-oss?hsCtaTracking=99d9dd4f-5681-48d2-b096-470725510d34%7C074ddad0-fdef-4e53-8aa8-5e8a876d6ab4)
+[Download Qt](https://download.qt.io/archive/qt/4.8/4.8.5/)
+### Qt version 4.8.5 is required
 ```diff
 sudo apt install libgtk2.0-dev
 sudo apt install libgtk-3-dev
@@ -211,10 +212,14 @@ sudo apt install libgtk-3-dev
 cd Downloads
 ```
 ```diff
-chmod +x qt-unified-linux-x64-4.7.0-online.run
+tar -zxvf qt-everywhere-opensource-src-4.8.5
 ```
 ```diff
-./qt-unified-linux-x64-4.7.0-online.run
+cd Downloads/qt-everywhere-opensource-src-4.8.5/
+./configure -no-openssl
+gmake
+sudo gmake install
+
 ```
 ### Login to Qt and proceed
 [Download wxWidgets](https://www.wxwidgets.org/downloads/)
@@ -254,6 +259,35 @@ sudo apt-get install libxml2-dev -y
 sudo apt-get install libcairo2-dev -y
 ```
 [Download OpenBabel](https://sourceforge.net/projects/openbabel/files/openbabel/2.4.0/openbabel-openbabel-2-4-0.tar.gz/download)
+```diff
+tar -zxf openbabel-openbabel-2-4-0.tar.gz 
+mkdir build
+cd build
+cmake ../openbabel-openbabel-2-4-0
+make
+sudo make install
+```
+```diff
+sudo apt install aptitude
+sudo aptitude install yum-utils
+sudo aptitudee 
+```
+
+
+[Download Eigen]([http://eigen.tuxfamily.org/index.php?title=Main_Page#Download](https://gitlab.com/libeigen/eigen/-/archive/3.2.10/eigen-3.2.10.tar.gz))
+### Only use 3.2
+```diff
+tar -zxvf eigen-3.2.0.tar.gz 
+```
+
+```diff
+cd Downloads/avogadro-1.2.0/
+mkdir build
+cd build
+cmake ../ -Wno-dev
+make
+sudo make install
+```
 ## $\color{Violet}{\textbf{5. ORCA}}$
 [Reference](https://orcaforum.kofo.mpg.de/app.php/dlext/?sid=214e8ecd094649b921d2ca62bad3a384)
 ## $\color{Violet}{\textbf{6. WIEN2k}}$

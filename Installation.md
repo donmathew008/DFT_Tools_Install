@@ -31,9 +31,15 @@ sudo apt install curl wget
 ```diff
 sudo apt install diffutils patch
 ```
+```diff
+sudo apt-get install openjdk-8-jdk
+```
+```diff
+sudo apt-get install openjfx
+```
 ### All can be done together as follows(Even though NOT Recommended due to errors in troubleshooting)
 ```diff
-sudo apt install -y build-essential gfortran libopenmpi-dev openmpi-bin libblas-dev liblapack-dev libscalapack-mpi-dev libhdf5-dev libhdf5-mpi-dev libnetcdf-dev libnetcdff-dev netcdf-bin readline-common curl wget diffutils patch
+sudo apt install -y build-essential gfortran libopenmpi-dev openmpi-bin libblas-dev liblapack-dev libscalapack-mpi-dev libhdf5-dev libhdf5-mpi-dev libnetcdf-dev libnetcdff-dev netcdf-bin readline-common curl wget diffutils patch openjdk-8-jdk openjfx
 ```
 ### Download the "BURAI1.3_Linux.tgz" from the link given below
 [Download](https://github.com/BURAI-team/burai/releases/download/ver.1.3-linux/BURAI1.3_Linux.tgz)
@@ -65,12 +71,7 @@ cd ..
 
 ## $\color{Violet}{\textbf{2. SIESTA}}$
 ## $\color{Green}{\textbf{Prerequisites/ Preparing the environment}}$
-```diff
-sudo apt-get install openjdk-8-jdk
-```
-```diff
-sudo apt-get install openjfx
-```
+
 
 
 [Reference](https://docs.siesta-project.org/projects/siesta/en/latest/installation/legacy-build.html)

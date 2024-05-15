@@ -1,6 +1,12 @@
 # Installation of different DFT Tools in Ubuntu(here Ubuntu 22.04)
 
-
+### Initially install Anaconda from official website after signing in
+[Anaconda](https://www.anaconda.com/download)
+```diff
+cd Downloads
+chmod +x Anaconda3-2024.02-1-Linux-x86_64.sh
+./Anaconda3-2024.02-1-Linux-x86_64.sh
+```
 
 ## $\color{Violet}{\textbf{1. BURAI}}$
 ## $\color{Green}{\textbf{Prerequisites/ Preparing the environment}}$

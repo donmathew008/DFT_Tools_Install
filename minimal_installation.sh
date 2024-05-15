@@ -10,36 +10,9 @@ chmod +x Anaconda3-2024.02-1-Linux-x86_64.sh
 
 ## $\color{Violet}{\textbf{1. BURAI}}$
 ## $\color{Green}{\textbf{Prerequisites/ Preparing the environment}}$
+
 ```diff
-sudo apt install build-essential gfortran
-```
-```diff
-sudo apt install libopenmpi-dev openmpi-bin
-```
-```diff
-sudo apt install libblas-dev liblapack-dev libscalapack-mpi-dev
-```
-```diff
-sudo apt install libhdf5-dev libhdf5-mpi-dev libnetcdf-dev libnetcdff-dev netcdf-bin
-```
-```diff
-sudo apt install readline-common
-```
-```diff
-sudo apt install curl wget
-```
-```diff
-sudo apt install diffutils patch
-```
-```diff
-sudo apt-get install openjdk-8-jdk
-```
-```diff
-sudo apt-get install openjfx
-```
-### All can be done together as follows(Even though NOT Recommended due to errors in troubleshooting)
-```diff
-sudo apt install -y build-essential gfortran libopenmpi-dev openmpi-bin libblas-dev liblapack-dev libscalapack-mpi-dev libhdf5-dev libhdf5-mpi-dev libnetcdf-dev libnetcdff-dev netcdf-bin readline-common curl wget diffutils patch openjdk-8-jdk openjfx
+sudo apt install -y build-essential gfortran libopenmpi-dev openmpi-bin libblas-dev liblapack-dev libscalapack-mpi-dev libhdf5-dev libhdf5-mpi-dev libnetcdf-dev libnetcdff-dev netcdf-bin readline-common curl wget diffutils patch openjdk-8-jdk openjfx python3-pip cmake
 ```
 ### Download the "BURAI1.3_Linux.tgz" from the link given below
 [Download](https://github.com/BURAI-team/burai/releases/download/ver.1.3-linux/BURAI1.3_Linux.tgz)
@@ -71,8 +44,6 @@ java -Dprism.forceGPU=true -jar burai.jar
 ### To create a Desktop shortcut
 ```diff
 cd ..
-```
-```diff
 ./makeLauncher.sh
 ```
 
@@ -84,14 +55,8 @@ cd ..
 [Reference](https://docs.siesta-project.org/projects/siesta/en/latest/installation/legacy-build.html)
 ```diff
 wget https://gitlab.com/siesta-project/siesta/-/releases/v4.1.5/downloads/siesta-4.1.5.tar.gz
-```
-```diff
 tar xvzf siesta-4.1.5.tar.gz
-```
-```diff
 cd siesta-4.1.5/Obj
-```
-```diff
 cp gfortran.make arch.make
 ```
 #### $\color{Red}{\textbf{Possible error: Running the 'sh ../Src/obj setup.sh' will give a mismatch error so we will edit the `arch.make' file using vi editor}}$
@@ -111,31 +76,19 @@ FFLAGS = -O2 -fPIC -ftree-vectorize -w -fallow-argument-mismatch -O2
 ### Then run the following
 ```diff
 sh ../Src/obj_setup.sh
-```
-```diff
 make
-```
-```diff
 cd ..
-```
-```diff
 cd Util
-```
-```diff
 ./build_all.sh
 ```
 ### Copy siesta to usr/local/bin
 ```diff
 cd ..
-```
-```diff
 cd Obj
 ```
 ### check for "siesta"
 ```diff
 ls si*
-```
-```diff
 sudo cp siesta /usr/local/bin/
 ```
 ### Checking
@@ -170,42 +123,9 @@ chmod +x EVSLATT.sh
 ## $\color{Violet}{\textbf{3. BoltzTraP2}}$
 ## $\color{Green}{\textbf{Prerequisites/ Preparing the environment}}$
 [Reference](https://boltztrap2y.readthedocs.io/en/latest/BoltzTraP2.html)
-```diff
-pip install numpy
-```
-```diff
-pip install scipy
-```
-```diff
-pip install spglib
-```
-```diff
-pip install NetCDF4
-```
-```diff
-pip install ASE
-```
-```diff
-pip install colorama
-```
-```diff
-pip install pyFFTW
-```
-```diff
-pip install vtk
-```
-```diff
-pip install pytest
-```
-### All can be done together as follows(Even though NOT Recommended due to errors in troubleshooting)
+
 ```diff
 pip install numpy scipy spglib NetCDF4 ASE colorama pyFFTW vtk pytest
-```
-```diff
-sudo apt install python3-pip
-```
-```diff
-sudo apt install cmake
 ```
 ### Install BoltzTraP2 by
 ```diff
@@ -258,19 +178,7 @@ sudo ldconfig
 
 ```
 ```diff
-sudo apt install zlib1g -y
-```
-```diff
-sudo apt install zlib1g-dev -y
-```
-```diff
-sudo apt-get install libxml2 -y
-```
-```diff
-sudo apt-get install libxml2-dev -y
-```
-```diff
-sudo apt-get install libcairo2-dev -y
+sudo apt install -y zlib1g zlib1g-dev libxml2 libxml2-dev libcairo2-dev
 ```
 [Download OpenBabel](https://sourceforge.net/projects/openbabel/files/openbabel/2.4.0/openbabel-openbabel-2-4-0.tar.gz/download)
 ```diff

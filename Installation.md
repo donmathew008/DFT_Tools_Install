@@ -57,6 +57,10 @@ cd BURAI1.3/bin
 java -jar burai.jar
 ```
 ### This might give an error to fix it run fix_burai.sh after making it executable 
+```diff
+chmod +x fix_burai.sh
+sudo ./fix_burai.sh
+```
 #### $\color{Red}{\textbf{Possible error: Could not find or load main class burai.app.QEFXMain}}$
 
 ### It should open the GUI

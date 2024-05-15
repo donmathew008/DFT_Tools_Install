@@ -56,6 +56,9 @@ cd BURAI1.3/bin
 ```diff
 java -jar burai.jar
 ```
+### This might give an error to fix it run fix_burai.sh after making it executable 
+#### $\color{Red}{\textbf{Possible error: Could not find or load main class burai.app.QEFXMain}}$
+
 ### It should open the GUI
 #### $\color{Red}{\textbf{Possible error: No structure visualisation is shown. NB: Run this iff no structure is shown else go to next step creating Desktop shortcut}}$
 ```diff

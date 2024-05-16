@@ -11,34 +11,6 @@ chmod +x Anaconda3-2024.02-1-Linux-x86_64.sh
 ## $\color{Violet}{\textbf{1. BURAI}}$
 ## $\color{Green}{\textbf{Prerequisites/ Preparing the environment}}$
 ```diff
-sudo apt install build-essential gfortran
-```
-```diff
-sudo apt install libopenmpi-dev openmpi-bin
-```
-```diff
-sudo apt install libblas-dev liblapack-dev libscalapack-mpi-dev
-```
-```diff
-sudo apt install libhdf5-dev libhdf5-mpi-dev libnetcdf-dev libnetcdff-dev netcdf-bin
-```
-```diff
-sudo apt install readline-common
-```
-```diff
-sudo apt install curl wget
-```
-```diff
-sudo apt install diffutils patch
-```
-```diff
-sudo apt-get install openjdk-8-jdk
-```
-```diff
-sudo apt-get install openjfx
-```
-### All can be done together as follows(Even though NOT Recommended due to errors in troubleshooting)
-```diff
 sudo apt install -y build-essential gfortran libopenmpi-dev openmpi-bin libblas-dev liblapack-dev libscalapack-mpi-dev libhdf5-dev libhdf5-mpi-dev libnetcdf-dev libnetcdff-dev netcdf-bin readline-common curl wget diffutils patch openjdk-8-jdk openjfx
 ```
 ### Download the "BURAI1.3_Linux.tgz" from the link given below
@@ -47,8 +19,6 @@ sudo apt install -y build-essential gfortran libopenmpi-dev openmpi-bin libblas-
 ### Unzip the file either using the command line (OR just extract directly)
 ```diff
 tar -xvzf BURAI1.3_Linux.tgz
-```
-```diff
 cd BURAI1.3/bin
 ```
 ### Check for "burai.jar" using ls command
@@ -57,11 +27,12 @@ cd BURAI1.3/bin
 java -jar burai.jar
 ```
 ### This might give an error to fix it run fix_burai.sh after making it executable 
+#### $\color{Red}{\textbf{Possible error: Could not find or load main class burai.app.QEFXMain}}$
+
 ```diff
 chmod +x fix_burai.sh
 sudo ./fix_burai.sh
 ```
-#### $\color{Red}{\textbf{Possible error: Could not find or load main class burai.app.QEFXMain}}$
 
 ### It should open the GUI
 #### $\color{Red}{\textbf{Possible error: No structure visualisation is shown}}$
@@ -72,8 +43,6 @@ java -Dprism.forceGPU=true -jar burai.jar
 ### To create a Desktop shortcut
 ```diff
 cd ..
-```
-```diff
 ./makeLauncher.sh
 ```
 

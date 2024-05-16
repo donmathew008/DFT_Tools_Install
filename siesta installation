@@ -1,0 +1,81 @@
+(1) To Create input file:
+	(a) install gdis
+		sudo apt-get install gdis
+		
+	(b) Download Ag.cif from matreials project
+	(c) Open Ag.cif with gdis
+		gdis Ag.cif
+	(d) Save as Ag.fdf
+	
+	
+(2) To install ATOM which helps to generate pseudo potential files:
+
+	(a) Go to Pseudo Directory in Siesta location
+	(b) Download ATOM from siesta site
+		wget https://siesta-project.org/SIESTA_MATERIAL/Pseudos/Code/atom-4.2.7-100.tgz
+	(c) Unzip the folder
+		tar xvf atom-4.2.7-100.tgz 
+	(d) Go to atom folder
+		cd atom-4.2.7-100/
+	(e) open installation manual
+		gedit 000_INSTALL 
+	(f) Download and install libgridxc :
+		wget https://launchpad.net/libgridxc/trunk/0.8/+download/libgridxc-0.8.5.tgz
+		tar xvf libgridxc-0.8.5.tgz 
+		cd libgridxc-0.8.5/
+	# Follow instruction in INSTALL file
+		mkdir Gfortran
+		cd Gfortran
+		cp ../extra/fortran.mk .
+		sh ../src/config.sh
+		make clean
+		make
+		cd ../../
+	(g) Coming back to atom folder, install xmlf90 :
+		wget https://launchpad.net/xmlf90/trunk/1.5/+download/xmlf90-1.5.4.tar.gz
+		tar xvf xmlf90-1.5.4.tar.gz
+		cd xmlf90-1.5.4
+	# Follow instructions in INSTALL file
+		./configure
+		make
+		sudo make install 
+		cd ../
+	(h) Come back to atom file and continue installing atom.
+		cp arch.make.sample arch.make
+		gedit arch.make
+	# edit the path for files make following changes in the arch.make:
+		XMLF90_ROOT=/home/vincent/Downloads/siesta-4.1.5/Pseudo/atom-4.2.7-100/xmlf90-1.5.4/config/data
+		GRIDXC_ROOT=/home/vincent/Downloads/siesta-4.1.5/Pseudo/atom-4.2.7-100/libgridxc-0.8.5/Gfortran
+		include $(XMLF90_ROOT)/xmlf90.mk
+		include $(GRIDXC_ROOT)/gridxc.mk
+	# Continue in the atom folder:
+		make
+	ATOM installed.
+	
+(3) Generating Pseudo potential Files with ATOM:
+
+	cd ~/Downloads/siesta-4.1.5/Pseudo/atom-4.2.7-100/Tutorial/PS_Generation
+			
+	.	.	.	.
+	
+	.	.	.	.
+	
+	.	.	.	.
+	
+(4) Alternate way to get Pseudo potential- Download from :
+	
+	https://nninc.cnf.cornell.edu/
+
+(5) Silver (Ag)
+	
+
+
+
+
+
+
+
+
+
+		
+	

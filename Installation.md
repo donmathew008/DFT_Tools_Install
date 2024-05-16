@@ -212,6 +212,11 @@ sudo apt install cmake
 ```diff
 pip3 install boltztrap2
 ```
+#### Even though this method installs BoltzTraP2, a building it from [here](https://gitlab.com/sousaw/BoltzTraP2) is highly preferred
+```diff
+wget https://gitlab.com/sousaw/BoltzTraP2/-/archive/public/BoltzTraP2-public.tar.gz
+
+```
 ## $\color{Violet}{\textbf{4. Avogadro}}$
 ## $\color{Green}{\textbf{Prerequisites/ Preparing the environment}}$
 

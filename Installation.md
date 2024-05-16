@@ -9,6 +9,10 @@ chmod +x Anaconda3-2024.02-1-Linux-x86_64.sh
 ```
 
 ## $\color{Violet}{\textbf{1. BURAI}}$
+
+### BURAI is a GUI system of Quantum ESPRESSO
+[Reference](https://burai.readthedocs.io/en/latest/)
+
 ## $\color{Green}{\textbf{Prerequisites/ Preparing the environment}}$
 ```diff
 sudo apt install build-essential gfortran
@@ -78,11 +82,11 @@ cd ..
 ```
 
 ## $\color{Violet}{\textbf{2. SIESTA}}$
+### SIESTA is both a method and its computer program implementation, to perform efficient electronic structure calculations and ab initio molecular dynamics simulations of molecules and solids.
+[Reference](https://docs.siesta-project.org/projects/siesta/en/latest/installation/legacy-build.html)
 ## $\color{Green}{\textbf{Prerequisites/ Preparing the environment}}$
 
 
-
-[Reference](https://docs.siesta-project.org/projects/siesta/en/latest/installation/legacy-build.html)
 ```diff
 wget https://gitlab.com/siesta-project/siesta/-/releases/v4.1.5/downloads/siesta-4.1.5.tar.gz
 ```

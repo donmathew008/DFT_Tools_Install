@@ -213,86 +213,57 @@ pip3 install boltztrap2
 ```
 ## $\color{Violet}{\textbf{4. Avogadro}}$
 ## $\color{Green}{\textbf{Prerequisites/ Preparing the environment}}$
-### VScode(from ubuntu software) and Anaconda should be installed
+
 [Reference](https://avogadro.cc/)
 
 [Download Qt](https://download.qt.io/archive/qt/4.8/4.8.5/)
-### Qt version 4.8.5 is required
+### Qt install
 ```diff
-sudo apt install libgtk2.0-dev
-sudo apt install libgtk-3-dev
+sudo apt install -y libgtk2.0-dev libgtk-3-dev
+sudo add-apt-repository ppa:rock-core/qt4
+sudo apt update
+sudo apt install qt4-dev-tools libqt4-dev libqtcore4 libqtgui4
 ```
+### Install zlib cairo eigen libxml
 ```diff
-cd Downloads
+sudo apt install -y zlib1g zlib1g-dev libxml2 libxml2-dev libcairo2-dev libeigen3-dev
 ```
+### wxWidgets
+[Download](https://www.wxwidgets.org/downloads/)
 ```diff
-tar -zxvf qt-everywhere-opensource-src-4.8.5
-```
-```diff
-cd Downloads/qt-everywhere-opensource-src-4.8.5/
-./configure -no-openssl
-gmake
-sudo gmake install
-
-```
-### Login to Qt and proceed
-[Download wxWidgets](https://www.wxwidgets.org/downloads/)
-```diff
-tar -xf wxWidgets-3.2.4.tar.bz2
-```
-### Open "Visual Studio Command Prompt" window
-```diff
-cd Downloads/wxWidgets-3.2.4/
-```
-```diff
+cd Downloads/
+tar -xf wxWidgets-3.2.5.tar.bz2
+cd wxWidgets-3.2.5/
 mkdir gtk-build
 cd gtk-build/
 ../configure
-
-make #for single core
-make -j4 #for 4 core
-
+make
 sudo make install
 sudo ldconfig
+```
 
-
-```
-```diff
-sudo apt install zlib1g -y
-```
-```diff
-sudo apt install zlib1g-dev -y
-```
-```diff
-sudo apt-get install libxml2 -y
-```
-```diff
-sudo apt-get install libxml2-dev -y
-```
-```diff
-sudo apt-get install libcairo2-dev -y
-```
 [Download OpenBabel](https://sourceforge.net/projects/openbabel/files/openbabel/2.4.0/openbabel-openbabel-2-4-0.tar.gz/download)
 ```diff
-tar -zxf openbabel-openbabel-2-4-0.tar.gz 
+ tar -zxf openbabel-openbabel-2-4-0.tar.gz
 mkdir build
 cd build
 cmake ../openbabel-openbabel-2-4-0
 make
 sudo make install
 ```
+
 ```diff
-sudo apt install aptitude
-sudo aptitude install yum-utils
-sudo aptitudee 
+git clone --recursive git://github.com/OpenChemistry/openchemistry.git #error
+git clone --recursive https://github.com/OpenChemistry/openchemistry.git
+git pull #error
+git submodule update --init #error
+sudo apt-get install -y cmake curl build-essential qtbase5-dev qtdeclarative5-dev zlib1g-dev libxml2-dev git libqt5svg5-dev libqt5gui5 libqt5concurrent5 rapidjson-dev
+mkdir openchemistry-build
+cd openchemistry-build
+cmake ../openchemistry
+cmake --build . --config Release
 ```
 
-
-[Download Eigen]([http://eigen.tuxfamily.org/index.php?title=Main_Page#Download](https://gitlab.com/libeigen/eigen/-/archive/3.2.10/eigen-3.2.10.tar.gz))
-### Only use 3.2
-```diff
-tar -zxvf eigen-3.2.0.tar.gz 
-```
 
 ```diff
 cd Downloads/avogadro-1.2.0/

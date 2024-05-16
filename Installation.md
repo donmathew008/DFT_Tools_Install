@@ -285,7 +285,7 @@ sudo apt-get install -y virtualbox virtualbox-qt
 #### We have to install an extension pack so that we can use shared folder
 [Download Extensionpack](https://download.virtualbox.org/virtualbox/6.1.50/Oracle_VM_VirtualBox_Extension_Pack-6.1.50.vbox-extpack)
 #### Open virtualbox -> File -> Preferences -> Extensions -> $add the downloaded extension pack and Install
-[Download WIndows10 ISO(64 bit)]([https://www.microsoft.com/en-in/software-download/windows10ISO](https://software.download.prss.microsoft.com/dbazure/Win10_22H2_English_x64v1.iso?t=6db8adfe-bf7d-4e7c-afe7-189eedffd6e3&P1=1715931064&P2=601&P3=2&P4=j%2fkvFhLUOKzcIwr4CNjFhF%2fsKvylkZWau98LJGJb4FgFYT9Dwc68nevOe7K418Gx7JI9TTyWYBhxflx5kB4KcWhXIU0gMm9pt0m1bfmAhdzCEPSPFR%2fUWCe3FqJFAkkR3M0yyj0pNXdQWvHmf3awyruVT51lRd1RTVjfL%2bnOcXbZJhVrruV8fJ6%2fS80fjmOKU%2f%2bKfxowT%2bSupGT6owXOukZZZ5LjzCrEYWgS20MDaP2OSHW%2f3lGeYM1xQM6xQbgz7lsu2Ma19nl4EYeh98gBFul9CugHCNV5qVLFAbQLenTG6rTM7GhRpezUA3rCKXOy%2bglvO0wokRvVApX0xXHrWg%3d%3d))
+[Download WIndows10 ISO(64 bit)](https://software.download.prss.microsoft.com/dbazure/Win10_22H2_English_x64v1.iso?t=6db8adfe-bf7d-4e7c-afe7-189eedffd6e3&P1=1715931064&P2=601&P3=2&P4=j%2fkvFhLUOKzcIwr4CNjFhF%2fsKvylkZWau98LJGJb4FgFYT9Dwc68nevOe7K418Gx7JI9TTyWYBhxflx5kB4KcWhXIU0gMm9pt0m1bfmAhdzCEPSPFR%2fUWCe3FqJFAkkR3M0yyj0pNXdQWvHmf3awyruVT51lRd1RTVjfL%2bnOcXbZJhVrruV8fJ6%2fS80fjmOKU%2f%2bKfxowT%2bSupGT6owXOukZZZ5LjzCrEYWgS20MDaP2OSHW%2f3lGeYM1xQM6xQbgz7lsu2Ma19nl4EYeh98gBFul9CugHCNV5qVLFAbQLenTG6rTM7GhRpezUA3rCKXOy%2bglvO0wokRvVApX0xXHrWg%3d%3d)
 #### This is the official iso file but doesn't have a product key, still we can use it. But some modifications are needed so that we can use Windows as a virtual machine.
 #### Open virtualbox > Give a #name > add the ISO file
 #### Set Base Memory little below half the available memory(We are having 8GB)
@@ -295,7 +295,7 @@ sudo apt-get install -y virtualbox virtualbox-qt
 #### Go to Settings > Display > set "Video Memory" to 128 MB(default), check "Enable 3D Acceleration"
 #### Go to Settings > USB > Check the "USB 1,1(OHCI) Controller"
 #### Go to Settings > Shared Folders > 
-
+#### Refer [Video](https://youtu.be/GZBiyKfSTA4?si=64l5kUknL0VBp9bj) for shared folders
 
 
 ## $\color{Violet}{\textbf{5. ORCA}}$

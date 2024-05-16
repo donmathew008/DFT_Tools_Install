@@ -254,6 +254,7 @@ sudo make install
 ```
 #### $\color{Red}{\textbf{The below commands should build the openchemistry repository which has avagadro as a module}}$
 #### $\color{Red}{\textbf{But this have some issues with git clone and build so this doesn't work}}$
+
 ```diff
 git clone --recursive git://github.com/OpenChemistry/openchemistry.git #error
 git clone --recursive https://github.com/OpenChemistry/openchemistry.git
@@ -265,6 +266,8 @@ cd openchemistry-build
 cmake ../openchemistry
 cmake --build . --config Release
 ```
+## or
+[Download](https://www.openchemistry.org/downloads/)
 #### $\color{Red}{\textbf{The below commands should install avagadro, but this too doesn't work}}$
 [Download Avagadro from here](https://avogadro.cc/)
 ```diff
@@ -296,6 +299,7 @@ sudo apt-get install -y virtualbox virtualbox-qt
 #### Go to Settings > USB > Check the "USB 1,1(OHCI) Controller"
 #### Go to Settings > Shared Folders > 
 #### Refer [Video](https://youtu.be/GZBiyKfSTA4?si=64l5kUknL0VBp9bj) for shared folders
+#### Download the "AvogadroOrca4.2.1.current.exe" from this repository and install in Windows
 
 
 ## $\color{Violet}{\textbf{5. ORCA}}$

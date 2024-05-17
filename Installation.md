@@ -13,7 +13,7 @@ chmod +x Anaconda3-2024.02-1-Linux-x86_64.sh
 #### BURAI is a GUI system of Quantum ESPRESSO
 [Reference](https://burai.readthedocs.io/en/latest/)
 
-### $\color{Green}{\textbf{Prerequisites/ Preparing the environment}}$
+#### $\color{Green}{\textbf{Prerequisites/ Preparing the environment}}$
 ```diff
 sudo apt install build-essential gfortran
 ```
@@ -85,7 +85,7 @@ cd ..
 ## $\color{Violet}{\textbf{2. SIESTA}}$
 #### SIESTA is both a method and its computer program implementation, to perform efficient electronic structure calculations and ab initio molecular dynamics simulations of molecules and solids.
 [Reference](https://docs.siesta-project.org/projects/siesta/en/latest/installation/legacy-build.html)
-### $\color{Green}{\textbf{Prerequisites/ Preparing the environment}}$
+#### $\color{Green}{\textbf{Prerequisites/ Preparing the environment}}$
 
 
 ```diff
@@ -175,7 +175,7 @@ chmod +x EVSLATT.sh
 ```
 ## $\color{Violet}{\textbf{3. BoltzTraP2}}$
 #### BoltzTraP2 is a modern implementation of the smoothed Fourier interpolation algorithm for electronic bands that formed the base of the original and widely used BoltzTraP code. One of the most typical uses of BoltzTraP is the calculation of thermoelectric transport coefficients as functions of temperature and chemical potential in the rigid-band picture. 
-### $\color{Green}{\textbf{Prerequisites/ Preparing the environment}}$
+#### $\color{Green}{\textbf{Prerequisites/ Preparing the environment}}$
 [Reference](https://boltztrap2y.readthedocs.io/en/latest/BoltzTraP2.html)
 ```diff
 pip install numpy
@@ -228,7 +228,7 @@ wget https://gitlab.com/sousaw/BoltzTraP2/-/archive/public/BoltzTraP2-public.tar
 #### Here we mention three methods to install Avogadro2 out of which one method doesn't work 
 ## $\color{Blue}{\textbf{Method 1(Preferred)}}$
 #### $\color{Green}{\textbf{The below commands should build the openchemistry repository which has avagadro as a module}}$
-### $\color{Green}{\textbf{Prerequisites/ Preparing the environment}}$
+#### $\color{Green}{\textbf{Prerequisites/ Preparing the environment}}$
 #### Here we mention installation of Qt,eigen, cairo, wxwidgets, OpenBabel. Even thogh building Avogadro Installs most of these packages, installing separately is preferred to find any unmet dependency
 [Reference](https://avogadro.cc/)
 

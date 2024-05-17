@@ -262,8 +262,8 @@ make
 sudo make install
 ```
 #### $\color{Red}{\textbf{The below commands should build the openchemistry repository which has avagadro as a module}}$
-#### $\color{Red}{\textbf{But this have some issues with git clone and build so this doesn't work}}$
-#### Issue: Access Denied(Public Key)
+#### $\color{Green}{\textbf{You should have a github account to do this}}$
+#### Setting SSH key
 ```diff
 cd ~/.ssh && ssh-keygen
 cat id_rsa.pub
@@ -272,25 +272,54 @@ cat id_rsa.pub
 ```diff
 ssh -T git@github.com
 ```
-#### This should show "You've successfully authenticated, but GitHub does not provide shell access.
-"
+#### This should show "You've successfully authenticated, but GitHub does not provide shell access."
 #### But still if you run the command it won't work, we need to configure git
 ```diff
 git config --global url."https://".insteadOf git://
 ```
-#### This will solve the problem
+#### Thus we can clone to the below directory but we need CMake 3.3+(CMake3.29.3) for building [[Reference]](https://wiki.openchemistry.org/Build)
+### Installing CMake
+[Download](https://github.com/Kitware/CMake/releases/download/v3.29.3/cmake-3.29.3.tar.gz)
+```diff
+cd Downloads/
+tar -xvzf cmake-3.29.3.tar.gz
+./bootstrap && make && sudo make install
+```
+### Installing googletest # even though this might not be necessary
+```diff
+git clone https://github.com/google/googletest.git -b release-1.10.0
+cd googletest        
+mkdir build          
+cd build
+cmake ..             
+```
+#### Now it is all set to build openchemistry
 ```diff
 git clone --recursive git://github.com/OpenChemistry/openchemistry.git
 cd openchemistry/
 git pull
 git submodule update --init
-sudo apt-get install -y cmake curl build-essential qtbase5-dev qtdeclarative5-dev zlib1g-dev libxml2-dev git libqt5svg5-dev libqt5gui5 libqt5concurrent5 rapidjson-dev
+sudo apt-get install -y curl build-essential qtbase5-dev qtdeclarative5-dev zlib1g-dev libxml2-dev git libqt5svg5-dev libqt5gui5 libqt5concurrent5 rapidjson-dev
 cd
 mkdir openchemistry-build
 cd openchemistry-build
 cmake ../openchemistry
 cmake --build . --config Release
-
+```
+#### To start avogadro2, Open a terminal
+```diff
+./openchemistry-build/prefix/bin/avogadro2
+```
+#### The molequeue, mongochem and avogadroapps projects can build installers this can be done by
+```diff
+cd openchemistry-build/avogadroapp
+make package
+```
+#### This will start downloading "Avogadro2-1.99.0-Linux.tar.gz"
+```diff
+tar -xvzf cmake-3.29.3.tar.gz
+cd Avogadro2-1.99.0-Linux/bin
+./avogadro2
 ```
 ## or
 [Download](https://www.openchemistry.org/downloads/)

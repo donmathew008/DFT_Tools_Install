@@ -60,7 +60,7 @@ cd BURAI1.3/bin
 ```diff
 java -jar burai.jar
 ```
-#### This might give an error to fix it run fix_burai.sh after making it executable 
+#### This might give an error to fix it run fix_burai.sh after making it executable [Reference](https://github.com/mampaiva/fix-burai/blob/master/fix-burai.sh)
 ```diff
 chmod +x fix_burai.sh
 sudo ./fix_burai.sh

@@ -292,7 +292,7 @@ wget https://gitlab.com/sousaw/BoltzTraP2/-/archive/public/BoltzTraP2-public.tar
 ```
 ## $\color{Violet}{\textbf{4. Avogadro2}}$
 #### Avogadro 2 is a chemical editor and visualization application, it is also a set of reusable software libraries written in C++ using principles of modularity for maximum reuse
-#### Here we mention three methods to install Avogadro2 out of which one method doesn't work 
+#### Here we mention four methods to install Avogadro2 out of which two method doesn't work 
 ## $\color{Blue}{\textbf{Method 1(Preferred)}}$
 #### $\color{Green}{\textbf{The below commands should build the openchemistry repository which has avagadro as a module}}$
 #### $\color{Green}{\textbf{Prerequisites/ Preparing the environment}}$
@@ -422,8 +422,8 @@ cmake ../ -Wno-dev
 make
 sudo make install
 ```
-## $\color{Blue}{\textbf{Method 3}}$
-#### $\color{Red}{\textbf{The below command should install Avogadro2, but this too doesn't work}}$
+## $\color{Blue}{\textbf{Method 3(Sometimes this doesn't work)}}$
+#### This installs Avogadro2
 ```diff
 sudo apt-get install avogadro
 ```

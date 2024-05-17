@@ -73,13 +73,16 @@ sudo ./fix_burai.sh
 ```diff
 java -Dprism.forceGPU=true -jar burai.jar
 ```
-#### To create a Desktop shortcut
+#### The above command should be executed again if BURAI is restarted to visualize the structure, But this can be incorporated in the Desktop shortcut
+#### To create a Desktop shortcut and incorporate above command replace "burai.sh" file in the 'bin' folder(Downloads/BURAI1.3/bin) with the one given in this repository and execute the following
+
 ```diff
 cd ..
 ```
 ```diff
 ./makeLauncher.sh
 ```
+#### This creates 'BURAI.desktop', copy this to Desktop
 #### Right click on the created desktop icon and press "Allow Launching"
 
 ## $\color{Violet}{\textbf{2. SIESTA}}$
@@ -334,6 +337,7 @@ cd Avogadro2-1.99.0-Linux/bin
 ```diff
 makeLauncher_avogadro.sh 
 ```
+#### This creates 'Avogadro.desktop', copy this to Desktop
 #### Right click on the created desktop icon and press "Allow Launching" and open the app
 #### $\color{Red}{\textbf{Possible Error: This system does not support OpenGL.}}$
 #### Solution open a terminal window and execute the following command afterwards Avagadro2 should open

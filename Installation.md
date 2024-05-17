@@ -448,7 +448,7 @@ sudo apt-get install -y virtualbox virtualbox-qt
 #### $\color{Red}{\textbf{Do not Start the VM yet}}$
 #### Go to Settings > System > Uncheck the "Floppy"
 #### Go to Settings > Display > set "Video Memory" to 128 MB(default), check "Enable 3D Acceleration"
-#### Go to Settings > USB > Check the "USB 1,1(OHCI) Controller"
+#### Go to Settings > USB > Check the "USB 1.1(OHCI) Controller"
 #### Go to Settings > Shared Folders > 
 #### Refer [Video](https://youtu.be/GZBiyKfSTA4?si=64l5kUknL0VBp9bj) for shared folders
 #### Download the "AvogadroOrca4.2.1.current.exe" from this repository and install in Windows

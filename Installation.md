@@ -13,7 +13,7 @@ chmod +x Anaconda3-2024.02-1-Linux-x86_64.sh
 ### BURAI is a GUI system of Quantum ESPRESSO
 [Reference](https://burai.readthedocs.io/en/latest/)
 
-## $\color{Green}{\textbf{Prerequisites/ Preparing the environment}}$
+### $\color{Green}{\textbf{Prerequisites/ Preparing the environment}}$
 ```diff
 sudo apt install build-essential gfortran
 ```
@@ -80,11 +80,12 @@ cd ..
 ```diff
 ./makeLauncher.sh
 ```
+### Right click on the created desktop icon and press "Allow Launching"
 
 ## $\color{Violet}{\textbf{2. SIESTA}}$
 ### SIESTA is both a method and its computer program implementation, to perform efficient electronic structure calculations and ab initio molecular dynamics simulations of molecules and solids.
 [Reference](https://docs.siesta-project.org/projects/siesta/en/latest/installation/legacy-build.html)
-## $\color{Green}{\textbf{Prerequisites/ Preparing the environment}}$
+### $\color{Green}{\textbf{Prerequisites/ Preparing the environment}}$
 
 
 ```diff
@@ -173,7 +174,8 @@ chmod +x EVSLATT.sh
 ./EVSLATT.sh
 ```
 ## $\color{Violet}{\textbf{3. BoltzTraP2}}$
-## $\color{Green}{\textbf{Prerequisites/ Preparing the environment}}$
+### BoltzTraP2 is a modern implementation of the smoothed Fourier interpolation algorithm for electronic bands that formed the base of the original and widely used BoltzTraP code. One of the most typical uses of BoltzTraP is the calculation of thermoelectric transport coefficients as functions of temperature and chemical potential in the rigid-band picture. 
+### $\color{Green}{\textbf{Prerequisites/ Preparing the environment}}$
 [Reference](https://boltztrap2y.readthedocs.io/en/latest/BoltzTraP2.html)
 ```diff
 pip install numpy
@@ -221,9 +223,13 @@ pip3 install boltztrap2
 wget https://gitlab.com/sousaw/BoltzTraP2/-/archive/public/BoltzTraP2-public.tar.gz
 
 ```
-## $\color{Violet}{\textbf{4. Avogadro}}$
-## $\color{Green}{\textbf{Prerequisites/ Preparing the environment}}$
-
+## $\color{Violet}{\textbf{4. Avogadro2}}$
+### Avogadro 2 is a chemical editor and visualization application, it is also a set of reusable software libraries written in C++ using principles of modularity for maximum reuse
+#### Here we mention three methods to install Avogadro2 out of which one method doesn't work 
+## $\color{Blue}{\textbf{Method 1(Preferred)}}$
+#### $\color{Green}{\textbf{The below commands should build the openchemistry repository which has avagadro as a module}}$
+### $\color{Green}{\textbf{Prerequisites/ Preparing the environment}}$
+#### Here we mention installation of Qt,eigen, cairo, wxwidgets, OpenBabel. Even thogh building Avogadro Installs most of these packages, installing separately is preferred to find any unmet dependency
 [Reference](https://avogadro.cc/)
 
 [Download Qt](https://download.qt.io/archive/qt/4.8/4.8.5/)
@@ -232,7 +238,7 @@ wget https://gitlab.com/sousaw/BoltzTraP2/-/archive/public/BoltzTraP2-public.tar
 sudo apt install -y libgtk2.0-dev libgtk-3-dev
 sudo add-apt-repository ppa:rock-core/qt4
 sudo apt update
-sudo apt install qt4-dev-tools libqt4-dev libqtcore4 libqtgui4
+sudo apt install qt4-dev-tools libqt4-dev libqtcore4 libqtgui4 
 ```
 ### Install zlib cairo eigen libxml
 ```diff
@@ -261,23 +267,24 @@ cmake ../openbabel-openbabel-2-4-0
 make
 sudo make install
 ```
-#### $\color{Red}{\textbf{The below commands should build the openchemistry repository which has avagadro as a module}}$
+#### The initial setup is done, but the repository we are going to use doesn't build if the ssh key is not setup in GitHub
+
 #### $\color{Green}{\textbf{You should have a github account to do this}}$
 #### Setting SSH key
 ```diff
 cd ~/.ssh && ssh-keygen
 cat id_rsa.pub
 ```
-#### copy the contents to github website SSH keys
+#### copy the contents to github website SSH keys and then execute
 ```diff
 ssh -T git@github.com
 ```
 #### This should show "You've successfully authenticated, but GitHub does not provide shell access."
-#### But still if you run the command it won't work, we need to configure git
+#### But before moving further, we need to configure git, this allows to use "git" instead of "https" within the git clone
 ```diff
 git config --global url."https://".insteadOf git://
 ```
-#### Thus we can clone to the below directory but we need CMake 3.3+(CMake3.29.3) for building [[Reference]](https://wiki.openchemistry.org/Build)
+#### We need CMake 3.3+(CMake3.29.3) for building so we install it manually[[Reference]](https://wiki.openchemistry.org/Build)
 ### Installing CMake
 [Download](https://github.com/Kitware/CMake/releases/download/v3.29.3/cmake-3.29.3.tar.gz)
 ```diff
@@ -306,7 +313,8 @@ cd openchemistry-build
 cmake ../openchemistry
 cmake --build . --config Release
 ```
-#### To start avogadro2, Open a terminal
+#### From here you can directly skip to Creating a Desktop shortcut for Avogadro2
+#### To start avogadro2, Open a terminal 
 ```diff
 ./openchemistry-build/prefix/bin/avogadro2
 ```
@@ -321,9 +329,22 @@ tar -xvzf cmake-3.29.3.tar.gz
 cd Avogadro2-1.99.0-Linux/bin
 ./avogadro2
 ```
-## or
+### Creating a Desktop shortcut for Avogadro2
+### Download the folder 'Avogadro2' given in this repository and open the folder in terminal and execute
+```diff
+makeLauncher_avogadro.sh 
+```
+### Right click on the created desktop icon and press "Allow Launching" and open the app
+#### $\color{Red}{\textbf{Possible Error: This system does not support OpenGL.}}$
+#### Solution open a terminal window and execute the following command afterwards Avagadro2 should open
+```diff
+conda install -c conda-forge libstdcxx-ng
+```
+
+
+## $\color{Blue}{\textbf{Method 2(Not preferred)}}$
 [Download](https://www.openchemistry.org/downloads/)
-#### $\color{Red}{\textbf{The below commands should install avagadro, but this too doesn't work}}$
+#### $\color{Red}{\textbf{The below commands should install avagadro(NOT Avogadro2), but this doesn't work}}$
 [Download Avagadro from here](https://avogadro.cc/)
 ```diff
 cd Downloads/avogadro-1.2.0/
@@ -333,8 +354,14 @@ cmake ../ -Wno-dev
 make
 sudo make install
 ```
-### $\color{Green}{\textbf{Solution: Install Windows in VirtualBox and install the exe file}}$
+## $\color{Blue}{\textbf{Method 3}}$
+#### $\color{Red}{\textbf{The below command should install Avogadro2, but this too doesn't work}}$
+```diff
+sudo apt-get install avogadro
+```
+## $\color{Blue}{\textbf{Method 4(This a final option if all of the above doesn't work)}}$
 #### Seems to be a bit weird, but still gives a solution
+### $\color{Green}{\textbf{Solution: Install Windows in VirtualBox and install the exe file}}$
 ### Installing VirtualBox
 #### The below command installs Virtualbox6.1.50
 ```diff
@@ -362,5 +389,5 @@ sudo apt-get install -y virtualbox virtualbox-qt
 ### Just extract the files, that will do
 ## $\color{Violet}{\textbf{6. WIEN2k}}$
 [Reference](http://susi.theochem.tuwien.ac.at/)
-### This is a paid platform
+### This is a paid platform 
 

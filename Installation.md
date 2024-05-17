@@ -74,7 +74,7 @@ sudo ./fix_burai.sh
 java -Dprism.forceGPU=true -jar burai.jar
 ```
 #### The above command should be executed again if BURAI is restarted to visualize the structure, But this can be incorporated in the Desktop shortcut
-#### To create a Desktop shortcut and incorporate above command replace "[burai.sh](https://github.com/donmathew008/DFT_Tools_Install/blob/main/burai.sh)" file in the 'bin' folder(Downloads/BURAI1.3/bin) with the one given in this repository and execute the following
+#### To create a Desktop shortcut and incorporate above command replace "burai.sh" file in the 'bin' folder(Downloads/BURAI1.3/bin) with the one given in this repository and execute the following
 
 ```diff
 cd ..
@@ -159,7 +159,7 @@ sudo ./siesta
 ```
 #### from usr/local/bin folder
 
-## $\color{Rhodamine}{\textbf{Executing the first program }}$
+### $\color{Rhodamine}{\textbf{Executing the first program in SIESTA}}$
 #### Download and unzip the files from Dr. Arun Kumar
 [Download](https://drive.google.com/drive/folders/1h2PzQ2V2ALKun7PNkBC8qKw_wR59-hRW)
 #### Say it is in the Downloads folder, open a terminal window
@@ -172,10 +172,76 @@ cd Downloads/serb-workshop/files/gold/fcc
 ```diff
 chmod +x EVSLATT.sh
 ```
-#### Finally ececute the file using 
+#### Finally execute the file using 
 ```dif
 ./EVSLATT.sh
 ```
+#### We need to create the '.fdf' and '.psf' which are the input file and pseudo potential files to run siesta, this is done with 'GDIS' and 'ATOM' repectively.
+#### Install GDIS to create .fdf file
+```diff
+sudo apt-get install -y gdis
+```
+#### To open 'filename.cif' via GDIS, open terminal window at the file location and
+```diff
+gdis filename.cif
+```
+#### Then save the file as 'filename.fdf'
+#### Install ATOM to create .psf file
+#### Go to Pseudo Directory in Siesta location (Here it is in the Downloads folder)
+```diff
+cd Downloads/siesta-4.1.5/Pseudo/
+wget https://siesta-project.org/SIESTA_MATERIAL/Pseudos/Code/atom-4.2.7-100.tgz
+tar xvf atom-4.2.7-100.tgz
+cd atom-4.2.7-100/
+gedit 000_INSTALL
+```
+#### Download and install libgridxc
+```diff
+wget https://launchpad.net/libgridxc/trunk/0.8/+download/libgridxc-0.8.5.tgz
+tar xvf libgridxc-0.8.5.tgz 
+cd libgridxc-0.8.5/
+mkdir Gfortran
+cd Gfortran
+cp ../extra/fortran.mk .
+sh ../src/config.sh
+make clean
+make
+```
+#### Coming back to atom folder, install xmlf90
+```diff
+cd ../../
+wget https://launchpad.net/xmlf90/trunk/1.5/+download/xmlf90-1.5.4.tar.gz
+tar xvf xmlf90-1.5.4.tar.gz
+cd xmlf90-1.5.4
+./configure
+make
+sudo make install
+```
+#### Come back to atom file and continue installing atom.
+```diff
+cd ../
+cp arch.make.sample arch.make
+gedit arch.make
+```
+#### Edit the path for files make following changes in the arch.make:
+```diff
+  XMLF90_ROOT=/home/vincent/Downloads/siesta-4.1.5/Pseudo/atom-4.2.7-100/xmlf90-1.5.4/config/data
+		GRIDXC_ROOT=/home/vincent/Downloads/siesta-4.1.5/Pseudo/atom-4.2.7-100/libgridxc-0.8.5/Gfortran
+		include $(XMLF90_ROOT)/xmlf90.mk
+		include $(GRIDXC_ROOT)/gridxc.mk
+```
+#### Continue in the atom folder to complete the installation:
+```diff
+make
+sudo make install
+```
+#### Generating Pseudo potential Files with ATOM:
+```diff
+cd Downloads/siesta-4.1.5/Pseudo/atom-4.2.7-100/Tutorial/PS_Generation
+```
+#### Alternate way to get Pseudo potential- Download from :
+[Here](https://nninc.cnf.cornell.edu/)
+
 ## $\color{Violet}{\textbf{3. BoltzTraP2}}$
 #### BoltzTraP2 is a modern implementation of the smoothed Fourier interpolation algorithm for electronic bands that formed the base of the original and widely used BoltzTraP code. One of the most typical uses of BoltzTraP is the calculation of thermoelectric transport coefficients as functions of temperature and chemical potential in the rigid-band picture. 
 #### $\color{Green}{\textbf{Prerequisites/ Preparing the environment}}$
@@ -232,7 +298,7 @@ wget https://gitlab.com/sousaw/BoltzTraP2/-/archive/public/BoltzTraP2-public.tar
 ## $\color{Blue}{\textbf{Method 1(Preferred)}}$
 #### $\color{Green}{\textbf{The below commands should build the openchemistry repository which has avagadro as a module}}$
 #### $\color{Green}{\textbf{Prerequisites/ Preparing the environment}}$
-#### Here we mention installation of Qt,eigen, cairo, wxwidgets, OpenBabel. Even thogh building Avogadro Installs most of these packages, installing separately is preferred to find any unmet dependency
+#### Here we mention installation of Qt, eigen, cairo, wxwidgets, OpenBabel. Even thogh building Avogadro installs most of these packages, installing separately is preferred to find any unmet dependency
 [Reference](https://avogadro.cc/)
 
 [Download Qt](https://download.qt.io/archive/qt/4.8/4.8.5/)

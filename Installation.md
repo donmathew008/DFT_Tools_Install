@@ -74,7 +74,7 @@ sudo ./fix_burai.sh
 java -Dprism.forceGPU=true -jar burai.jar
 ```
 #### The above command should be executed again if BURAI is restarted to visualize the structure, But this can be incorporated in the Desktop shortcut
-#### To create a Desktop shortcut and incorporate above command replace "burai.sh" file in the 'bin' folder(Downloads/BURAI1.3/bin) with the one given in this repository and execute the following
+#### To create a Desktop shortcut and incorporate above command replace "[burai.sh](https://github.com/donmathew008/DFT_Tools_Install/blob/main/burai.sh)" file in the 'bin' folder(Downloads/BURAI1.3/bin) with the one given in this repository and execute the following
 
 ```diff
 cd ..

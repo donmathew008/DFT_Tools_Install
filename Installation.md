@@ -263,17 +263,34 @@ sudo make install
 ```
 #### $\color{Red}{\textbf{The below commands should build the openchemistry repository which has avagadro as a module}}$
 #### $\color{Red}{\textbf{But this have some issues with git clone and build so this doesn't work}}$
-
+#### Issue: Access Denied(Public Key)
 ```diff
-git clone --recursive git://github.com/OpenChemistry/openchemistry.git #error
-git clone --recursive https://github.com/OpenChemistry/openchemistry.git
-git pull #error
-git submodule update --init #error
+cd ~/.ssh && ssh-keygen
+cat id_rsa.pub
+```
+#### copy the contents to github website SSH keys
+```diff
+ssh -T git@github.com
+```
+#### This should show "You've successfully authenticated, but GitHub does not provide shell access.
+"
+#### But still if you run the command it won't work, we need to configure git
+```diff
+git config --global url."https://".insteadOf git://
+```
+#### This will solve the problem
+```diff
+git clone --recursive git://github.com/OpenChemistry/openchemistry.git
+cd openchemistry/
+git pull
+git submodule update --init
 sudo apt-get install -y cmake curl build-essential qtbase5-dev qtdeclarative5-dev zlib1g-dev libxml2-dev git libqt5svg5-dev libqt5gui5 libqt5concurrent5 rapidjson-dev
+cd
 mkdir openchemistry-build
 cd openchemistry-build
 cmake ../openchemistry
 cmake --build . --config Release
+
 ```
 ## or
 [Download](https://www.openchemistry.org/downloads/)

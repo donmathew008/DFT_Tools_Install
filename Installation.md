@@ -1,6 +1,6 @@
 # Installation of different DFT Tools in Ubuntu(here Ubuntu 22.04)
 
-### Initially install Anaconda from official website after signing in
+#### Initially install Anaconda from official website after signing in
 [Anaconda](https://www.anaconda.com/download)
 ```diff
 cd Downloads
@@ -10,7 +10,7 @@ chmod +x Anaconda3-2024.02-1-Linux-x86_64.sh
 
 ## $\color{Violet}{\textbf{1. BURAI}}$
 
-### BURAI is a GUI system of Quantum ESPRESSO
+#### BURAI is a GUI system of Quantum ESPRESSO
 [Reference](https://burai.readthedocs.io/en/latest/)
 
 ### $\color{Green}{\textbf{Prerequisites/ Preparing the environment}}$
@@ -41,49 +41,49 @@ sudo apt-get install openjdk-8-jdk
 ```diff
 sudo apt-get install openjfx
 ```
-### All can be done together as follows(Even though NOT Recommended due to errors in troubleshooting)
+#### All can be done together as follows(Even though NOT Recommended due to errors in troubleshooting)
 ```diff
 sudo apt install -y build-essential gfortran libopenmpi-dev openmpi-bin libblas-dev liblapack-dev libscalapack-mpi-dev libhdf5-dev libhdf5-mpi-dev libnetcdf-dev libnetcdff-dev netcdf-bin readline-common curl wget diffutils patch openjdk-8-jdk openjfx
 ```
-### Download the "BURAI1.3_Linux.tgz" from the link given below
+#### Download the "BURAI1.3_Linux.tgz" from the link given below
 [Download](https://github.com/BURAI-team/burai/releases/download/ver.1.3-linux/BURAI1.3_Linux.tgz)
-### Open the Downloads folder in terminal
-### Unzip the file either using the command line (OR just extract directly)
+#### Open the Downloads folder in terminal
+#### Unzip the file either using the command line (OR just extract directly)
 ```diff
 tar -xvzf BURAI1.3_Linux.tgz
 ```
 ```diff
 cd BURAI1.3/bin
 ```
-### Check for "burai.jar" using ls command
-### Execute the file by
+#### Check for "burai.jar" using ls command
+#### Execute the file by
 ```diff
 java -jar burai.jar
 ```
-### This might give an error to fix it run fix_burai.sh after making it executable 
+#### This might give an error to fix it run fix_burai.sh after making it executable 
 ```diff
 chmod +x fix_burai.sh
 sudo ./fix_burai.sh
 ```
 #### $\color{Red}{\textbf{Possible error: Could not find or load main class burai.app.QEFXMain}}$
 
-### It should open the GUI
+#### It should open the GUI
 #### $\color{Red}{\textbf{Possible error: No structure visualisation is shown}}$
 #### $\color{Red}{\textbf{NB: Run this iff no structure is shown else go to next step creating Desktop shortcut}}$
 ```diff
 java -Dprism.forceGPU=true -jar burai.jar
 ```
-### To create a Desktop shortcut
+#### To create a Desktop shortcut
 ```diff
 cd ..
 ```
 ```diff
 ./makeLauncher.sh
 ```
-### Right click on the created desktop icon and press "Allow Launching"
+#### Right click on the created desktop icon and press "Allow Launching"
 
 ## $\color{Violet}{\textbf{2. SIESTA}}$
-### SIESTA is both a method and its computer program implementation, to perform efficient electronic structure calculations and ab initio molecular dynamics simulations of molecules and solids.
+#### SIESTA is both a method and its computer program implementation, to perform efficient electronic structure calculations and ab initio molecular dynamics simulations of molecules and solids.
 [Reference](https://docs.siesta-project.org/projects/siesta/en/latest/installation/legacy-build.html)
 ### $\color{Green}{\textbf{Prerequisites/ Preparing the environment}}$
 
@@ -105,16 +105,16 @@ cp gfortran.make arch.make
 ```diff
 vi arch.make
 ```
-### Enter insert mode by pressing "i" and locate and replace the line
+#### Enter insert mode by pressing "i" and locate and replace the line
 ```diff
 FFLAGS = -O2 -fPIC -ftree-vectorize 
 ```
-### with
+#### with
 ```diff
 FFLAGS = -O2 -fPIC -ftree-vectorize -w -fallow-argument-mismatch -O2
 ```
-### save and exit by ":wq" after pressing Esc key
-### Then run the following
+#### save and exit by ":wq" after pressing Esc key
+#### Then run the following
 ```diff
 sh ../Src/obj_setup.sh
 ```
@@ -130,51 +130,51 @@ cd Util
 ```diff
 ./build_all.sh
 ```
-### Copy siesta to usr/local/bin
+#### Copy siesta to usr/local/bin
 ```diff
 cd ..
 ```
 ```diff
 cd Obj
 ```
-### check for "siesta"
+#### check for "siesta"
 ```diff
 ls si*
 ```
 ```diff
 sudo cp siesta /usr/local/bin/
 ```
-### Checking
-### Run 
+#### Checking
+#### Run 
 ```diff
 ./siesta
 ```
 from Obj folder
-### OR
+#### OR
 ```diff
 sudo ./siesta
 ```
-### from usr/local/bin folder
+#### from usr/local/bin folder
 
 ## $\color{Rhodamine}{\textbf{Executing the first program }}$
-### Download and unzip the files from Dr. Arun Kumar
+#### Download and unzip the files from Dr. Arun Kumar
 [Download](https://drive.google.com/drive/folders/1h2PzQ2V2ALKun7PNkBC8qKw_wR59-hRW)
-### Say it is in the Downloads folder, open a terminal window
+#### Say it is in the Downloads folder, open a terminal window
 ```diff
 cd Downloads/serb-workshop/files/gold/fcc
 ```
-### Where we can see three files "Au.psf", "EVSLATT.sh", "gold.fdf", out of which "gold.fdf" is the input file and "EVSLATT.sh" is the executable file
+#### Where we can see three files "Au.psf", "EVSLATT.sh", "gold.fdf", out of which "gold.fdf" is the input file and "EVSLATT.sh" is the executable file
 
-### The siesta_par is to be replaced with siesta(edited file is given in the repository) in the "EVSLATT.sh" and to make it executable from terminal
+#### The siesta_par is to be replaced with siesta(edited file is given in the repository) in the "EVSLATT.sh" and to make it executable from terminal
 ```diff
 chmod +x EVSLATT.sh
 ```
-### Finally ececute the file using 
+#### Finally ececute the file using 
 ```dif
 ./EVSLATT.sh
 ```
 ## $\color{Violet}{\textbf{3. BoltzTraP2}}$
-### BoltzTraP2 is a modern implementation of the smoothed Fourier interpolation algorithm for electronic bands that formed the base of the original and widely used BoltzTraP code. One of the most typical uses of BoltzTraP is the calculation of thermoelectric transport coefficients as functions of temperature and chemical potential in the rigid-band picture. 
+#### BoltzTraP2 is a modern implementation of the smoothed Fourier interpolation algorithm for electronic bands that formed the base of the original and widely used BoltzTraP code. One of the most typical uses of BoltzTraP is the calculation of thermoelectric transport coefficients as functions of temperature and chemical potential in the rigid-band picture. 
 ### $\color{Green}{\textbf{Prerequisites/ Preparing the environment}}$
 [Reference](https://boltztrap2y.readthedocs.io/en/latest/BoltzTraP2.html)
 ```diff
@@ -204,7 +204,7 @@ pip install vtk
 ```diff
 pip install pytest
 ```
-### All can be done together as follows(Even though NOT Recommended due to errors in troubleshooting)
+#### All can be done together as follows(Even though NOT Recommended due to errors in troubleshooting)
 ```diff
 pip install numpy scipy spglib NetCDF4 ASE colorama pyFFTW vtk pytest
 ```
@@ -214,7 +214,7 @@ sudo apt install python3-pip
 ```diff
 sudo apt install cmake
 ```
-### Install BoltzTraP2 by
+#### Install BoltzTraP2 by
 ```diff
 pip3 install boltztrap2
 ```
@@ -224,7 +224,7 @@ wget https://gitlab.com/sousaw/BoltzTraP2/-/archive/public/BoltzTraP2-public.tar
 
 ```
 ## $\color{Violet}{\textbf{4. Avogadro2}}$
-### Avogadro 2 is a chemical editor and visualization application, it is also a set of reusable software libraries written in C++ using principles of modularity for maximum reuse
+#### Avogadro 2 is a chemical editor and visualization application, it is also a set of reusable software libraries written in C++ using principles of modularity for maximum reuse
 #### Here we mention three methods to install Avogadro2 out of which one method doesn't work 
 ## $\color{Blue}{\textbf{Method 1(Preferred)}}$
 #### $\color{Green}{\textbf{The below commands should build the openchemistry repository which has avagadro as a module}}$
@@ -233,18 +233,18 @@ wget https://gitlab.com/sousaw/BoltzTraP2/-/archive/public/BoltzTraP2-public.tar
 [Reference](https://avogadro.cc/)
 
 [Download Qt](https://download.qt.io/archive/qt/4.8/4.8.5/)
-### Qt install
+#### Qt install
 ```diff
 sudo apt install -y libgtk2.0-dev libgtk-3-dev
 sudo add-apt-repository ppa:rock-core/qt4
 sudo apt update
 sudo apt install qt4-dev-tools libqt4-dev libqtcore4 libqtgui4 
 ```
-### Install zlib cairo eigen libxml
+#### Install zlib cairo eigen libxml
 ```diff
 sudo apt install -y zlib1g zlib1g-dev libxml2 libxml2-dev libcairo2-dev libeigen3-dev
 ```
-### wxWidgets
+#### wxWidgets
 [Download](https://www.wxwidgets.org/downloads/)
 ```diff
 cd Downloads/
@@ -285,14 +285,14 @@ ssh -T git@github.com
 git config --global url."https://".insteadOf git://
 ```
 #### We need CMake 3.3+(CMake3.29.3) for building so we install it manually[[Reference]](https://wiki.openchemistry.org/Build)
-### Installing CMake
+#### Installing CMake
 [Download](https://github.com/Kitware/CMake/releases/download/v3.29.3/cmake-3.29.3.tar.gz)
 ```diff
 cd Downloads/
 tar -xvzf cmake-3.29.3.tar.gz
 ./bootstrap && make && sudo make install
 ```
-### Installing googletest # even though this might not be necessary
+#### Installing googletest # even though this might not be necessary
 ```diff
 git clone https://github.com/google/googletest.git -b release-1.10.0
 cd googletest        
@@ -329,12 +329,12 @@ tar -xvzf cmake-3.29.3.tar.gz
 cd Avogadro2-1.99.0-Linux/bin
 ./avogadro2
 ```
-### Creating a Desktop shortcut for Avogadro2
-### Download the folder 'Avogadro2' given in this repository and open the folder in terminal and execute
+#### Creating a Desktop shortcut for Avogadro2
+#### Download the folder 'Avogadro2' given in this repository and open the folder in terminal and execute
 ```diff
 makeLauncher_avogadro.sh 
 ```
-### Right click on the created desktop icon and press "Allow Launching" and open the app
+#### Right click on the created desktop icon and press "Allow Launching" and open the app
 #### $\color{Red}{\textbf{Possible Error: This system does not support OpenGL.}}$
 #### Solution open a terminal window and execute the following command afterwards Avagadro2 should open
 ```diff
@@ -362,7 +362,7 @@ sudo apt-get install avogadro
 ## $\color{Blue}{\textbf{Method 4(This a final option if all of the above doesn't work)}}$
 #### Seems to be a bit weird, but still gives a solution
 ### $\color{Green}{\textbf{Solution: Install Windows in VirtualBox and install the exe file}}$
-### Installing VirtualBox
+#### Installing VirtualBox
 #### The below command installs Virtualbox6.1.50
 ```diff
 sudo apt-get install -y virtualbox virtualbox-qt
@@ -375,6 +375,8 @@ sudo apt-get install -y virtualbox virtualbox-qt
 #### Open virtualbox > Give a #name > add the ISO file
 #### Set Base Memory little below half the available memory(We are having 8GB)
 #### Create a virtual disk (50GB) and Finish the setup
+#### We need to delete a file before proceeding for that
+#### Go to General > Advanced > find the location of Snapshots folder and delete the file starting eith "Unattended"
 #### $\color{Red}{\textbf{Do not Start the VM yet}}$
 #### Go to Settings > System > Uncheck the "Floppy"
 #### Go to Settings > Display > set "Video Memory" to 128 MB(default), check "Enable 3D Acceleration"
@@ -386,8 +388,8 @@ sudo apt-get install -y virtualbox virtualbox-qt
 
 ## $\color{Violet}{\textbf{5. ORCA}}$
 [Reference](https://orcaforum.kofo.mpg.de/app.php/dlext/?sid=214e8ecd094649b921d2ca62bad3a384)
-### Just extract the files, that will do
+#### Just extract the files, that will do
 ## $\color{Violet}{\textbf{6. WIEN2k}}$
 [Reference](http://susi.theochem.tuwien.ac.at/)
-### This is a paid platform 
+#### This is a paid platform 
 

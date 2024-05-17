@@ -1,4 +1,4 @@
-# Installation of different DFT Tools in Ubuntu(here Ubuntu 22.04)
+## Installation of different DFT Tools in Ubuntu(here Ubuntu 22.04)
 
 #### Initially install Anaconda from official website after signing in
 [Anaconda](https://www.anaconda.com/download)
@@ -88,8 +88,6 @@ cd ..
 ## $\color{Violet}{\textbf{2. SIESTA}}$
 #### SIESTA is both a method and its computer program implementation, to perform efficient electronic structure calculations and ab initio molecular dynamics simulations of molecules and solids.
 [Reference](https://docs.siesta-project.org/projects/siesta/en/latest/installation/legacy-build.html)
-#### $\color{Green}{\textbf{Prerequisites/ Preparing the environment}}$
-
 
 ```diff
 wget https://gitlab.com/siesta-project/siesta/-/releases/v4.1.5/downloads/siesta-4.1.5.tar.gz
@@ -354,7 +352,7 @@ ssh -T git@github.com
 git config --global url."https://".insteadOf git://
 ```
 #### We need CMake 3.3+(CMake3.29.3) for building so we install it manually[[Reference]](https://wiki.openchemistry.org/Build)
-#### Installing CMake
+#### Installing CMake 3.29.3
 [Download](https://github.com/Kitware/CMake/releases/download/v3.29.3/cmake-3.29.3.tar.gz)
 ```diff
 cd Downloads/

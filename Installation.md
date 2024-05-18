@@ -292,11 +292,12 @@ wget https://gitlab.com/sousaw/BoltzTraP2/-/archive/public/BoltzTraP2-public.tar
 ```
 ## $\color{Violet}{\textbf{4. Avogadro2}}$
 #### Avogadro 2 is a chemical editor and visualization application, it is also a set of reusable software libraries written in C++ using principles of modularity for maximum reuse
-#### Here we mention four methods to install Avogadro2 out of which two method doesn't work 
+#### Here we mention four methods to install Avogadro2 out of which some methods doesn't work 
 ## $\color{Blue}{\textbf{Method 1(Preferred)}}$
+#### Initially you can go for Method 3 after building the necessary dependencies 
 #### $\color{Green}{\textbf{The below commands should build the openchemistry repository which has avagadro as a module}}$
 #### $\color{Green}{\textbf{Prerequisites/ Preparing the environment}}$
-#### Here we mention installation of Qt, eigen, cairo, wxwidgets, OpenBabel. Even thogh building Avogadro installs most of these packages, installing separately is preferred to find any unmet dependency
+#### Here we mention installation of Qt, Eigen, Cairo, wxWidgets, OpenBabel. Even thogh building Avogadro installs most of these packages, installing separately is preferred to find any unmet dependency
 [Reference](https://avogadro.cc/)
 
 [Download Qt](https://download.qt.io/archive/qt/4.8/4.8.5/)
@@ -412,7 +413,7 @@ conda install -c conda-forge libstdcxx-ng
 
 ## $\color{Blue}{\textbf{Method 2(Not preferred)}}$
 [Download](https://www.openchemistry.org/downloads/)
-#### $\color{Red}{\textbf{The below commands should install avagadro(NOT Avogadro2), but this doesn't work}}$
+#### $\color{Red}{\textbf{The below commands should install avagadro(NOT Avogadro2), but sometimes this doesn't work}}$
 [Download Avagadro from here](https://avogadro.cc/)
 ```diff
 cd Downloads/avogadro-1.2.0/

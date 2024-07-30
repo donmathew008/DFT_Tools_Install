@@ -444,8 +444,8 @@ sudo apt-get install -y virtualbox virtualbox-qt
 #### Open virtualbox > Give a #name > add the ISO file
 #### Set Base Memory little below half the available memory(We are having 8GB)
 #### Create a virtual disk (50GB) and Finish the setup
-#### We need to delete a file before proceeding for that
-#### Go to General > Advanced > find the location of Snapshots folder and delete the file starting eith "Unattended"
+#### We need to delete a file before proceeding, for that
+#### Go to General > Advanced > find the location of Snapshots folder and delete the file starting with "Unattended"
 #### $\color{Red}{\textbf{Do not Start the VM yet}}$
 #### Go to Settings > System > Uncheck the "Floppy"
 #### Go to Settings > Display > set "Video Memory" to 128 MB(default), check "Enable 3D Acceleration"

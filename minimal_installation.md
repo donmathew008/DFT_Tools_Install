@@ -75,7 +75,30 @@ sudo cp -a ~/Downloads/BURAI1.3/pseudopot/. ~/.burai/.pseudopot
 ```
 ##### Change the installation directory if required
 
-## $\color{Violet}{\textbf{2. SIESTA}}$
+## $\color{Violet}{\textbf{2. QUANTUM ESPRESSO}}$
+### $\color{Green}{\textbf{This is optional as we already have QE executables in BURAI}}$
+##### Initially register in Quantum Espresso
+[Register](https://www.quantum-espresso.org/register-user/)
+##### Then login using the credentials
+[Login](https://www.quantum-espresso.org/login/)
+##### Then download and unzip the files in a favourable location
+##### Open terminal in that location and execute 
+```diff
+cd qe-7.3.1-ReleasePack/qe-7.3.1/
+```
+##### $\color{Red}{\textbf{Check the version; folder name may be different}}$
+##### Execute the following
+```diff
+./configure
+```
+```diff
+make all
+```
+```diff
+sudo make install
+```
+
+## $\color{Violet}{\textbf{3. SIESTA}}$
 #### SIESTA is both a method and its computer program implementation, to perform efficient electronic structure calculations and ab initio molecular dynamics simulations of molecules and solids.
 
 ```diff
@@ -228,7 +251,7 @@ cd Downloads/siesta-4.1.5/Pseudo/atom-4.2.7-100/Tutorial/PS_Generation
 #### Alternate way to get Pseudo potential- Download from :
 [Here](https://nninc.cnf.cornell.edu/)
 
-## $\color{Violet}{\textbf{3. BoltzTraP2}}$
+## $\color{Violet}{\textbf{4. BoltzTraP2}}$
 #### BoltzTraP2 is a modern implementation of the smoothed Fourier interpolation algorithm for electronic bands that formed the base of the original and widely used BoltzTraP code. One of the most typical uses of BoltzTraP is the calculation of thermoelectric transport coefficients as functions of temperature and chemical potential in the rigid-band picture. 
 #### $\color{Green}{\textbf{Prerequisites/ Preparing the environment}}$
 ```diff
@@ -246,7 +269,7 @@ pip3 install boltztrap2
 wget https://gitlab.com/sousaw/BoltzTraP2/-/archive/public/BoltzTraP2-public.tar.gz
 ```
 
-## $\color{Violet}{\textbf{4. Avogadro2}}$
+## $\color{Violet}{\textbf{5. Avogadro2}}$
 #### Avogadro 2 is a chemical editor and visualization application, it is also a set of reusable software libraries written in C++ using principles of modularity for maximum reuse
 #### $\color{Green}{\textbf{The below commands should build the openchemistry repository which has avagadro as a module}}$
 #### $\color{Green}{\textbf{Prerequisites/ Preparing the environment}}$

@@ -361,8 +361,8 @@ wget https://gitlab.com/sousaw/BoltzTraP2/-/archive/public/BoltzTraP2-public.tar
 [Download Qt](https://download.qt.io/archive/qt/4.8/4.8.5/)
 #### Extract the files and open a terminal at that location
 ```diff
-./configure -openssl-linked
-gmake
+./configure -no-openssl
+gmake --always-make
 sudo gmake install
 ```
 

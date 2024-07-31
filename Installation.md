@@ -119,7 +119,7 @@ sudo cp -a ~/Downloads/BURAI1.3/pseudopot/. ~/.burai/.pseudopot
 ##### Normally no need to alter the "Path of MPI" section
 
 
-## $\color{Violet}{\textbf{2. QUANTUM ESPRESSO}}$
+## $\color{Violet}{\textbf{2. Quantum ESPRESSO}}$
 ### $\color{Green}{\textbf{This is optional as we already have QE executables in BURAI}}$
 ##### Initially register in Quantum Espresso
 [Register](https://www.quantum-espresso.org/register-user/)

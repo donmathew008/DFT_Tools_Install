@@ -1,5 +1,5 @@
 
-#### This gives an installation documentation repository for BURAI, SIESTA, BoltzTraP2, Avogadro2, ORCA, and WIEN2k(NOT a free software, NOT Documented)
+#### This gives an installation documentation repository for BURAI, Quantum ESPRESSO(Optional), SIESTA, BoltzTraP2, Avogadro2, ORCA, and WIEN2k(NOT a free software, NOT Documented)
 #### This also installs some additional packages Eigen, Cairo, GDIS, ATOM, OpenBabel, Qt, etc.
 #### The complete Documentation file is given by "Installation.md" which includes step by step installation and references
 #### The Documentation without references is given as "minimal_installation.md"

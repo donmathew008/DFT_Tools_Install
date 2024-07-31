@@ -88,30 +88,35 @@ cd ..
 #### That's it but on running "scf" files the below error will pop up
 
 #### $\color{Red}{\textbf{Possible error on running: No pseudopotentials, please download files}}$
-#### $\color{Violet}{\textbf{This may be due to two reasons 1. Wrong QE path, 2. Downloaded pseudopotentials is not in the location}}$
-##### $\color{Green}{\textbf{Solution: 1. Wrong QE path}}$
+#### $\color{Violet}{\textbf{This may be due to two reasons 1. Downloaded pseudopotentials is not in the location, 2. Wrong QE path}}$
+
+##### $\color{Green}{\textbf{Solution: 1. Downloaded pseudopotentials is not in the location}}$
+##### On running BURAI will search the pseudopotentials at ".burai/.pseudopot" which is available on the $HOME folder (It will be hidden so check the "Show Hidden Files" to view it)
+##### It will be empty
+##### $\color{Violet}{\textbf{OR}}$
+##### Open a terminal and 
+```diff
+ls cd .burai/.psedopot/
+```
+##### If it shows nothing, pseudopotentials are not in that folder but are available on the BURAI installation folder 
+##### We can do this by command line as follows
+```diff
+sudo cp -a ~/Downloads/BURAI1.3/pseudopot/. ~/.burai/.pseudopot
+```
+##### Change the installation directory if required
+##### $\color{Violet}{\textbf{OR}}$
+##### We can do this by just copying the files to the location as follows
+##### Open the BURAI psedopotential folder (Downloads/BURAI1.3/pseudopot) 
+##### Select all its contents and copy it
+##### Paste it in the .burai pseudopotential folder in $HOME directory (.burai/.pseudopot)
+
+##### $\color{Green}{\textbf{Solution: 2. Wrong QE path(This might not be needed if the above method works)}}$
 ##### Click on the top left arrow -> Path to QE
 ##### $\color{Violet}{\textbf{Note: The QE executables will be already available in BURAI folder}}$
 ##### If you installed QE and BURAI separately the "pw.x" executable will have two locations
 ###### One in "/usr/bin" and other in BURAI installation directory "Downloads/BURAI1.3/exec.LINUX/qe_openmpi" (For our case)
 ##### Here we have used "/usr/bin" for the "Where is 'pw.x'?"
 ##### Normally no need to alter the "Path of MPI" section
-
-##### $\color{Green}{\textbf{Solution: 2. Downloaded pseudopotentials is not in the location}}$
-##### On running BURAI will search the pseudopotentials at ".burai/.pseudopot" which is available on the $HOME folder (It will be hidden so check the "Show Hidden Files" to view it)
-##### It will be empty
-##### OR
-##### Open a terminal and 
-```diff
-ls cd .burai/.psedopot/
-```
-##### If it shows nothing pseudopotentials are not in that folder but are available on the BURAI installation folder 
-##### We can do this by command line as follows
-```diff
-cd 
-```
-
-
 
 
 ## $\color{Violet}{\textbf{2. SIESTA}}$

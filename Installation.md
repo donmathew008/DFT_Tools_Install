@@ -359,6 +359,14 @@ wget https://gitlab.com/sousaw/BoltzTraP2/-/archive/public/BoltzTraP2-public.tar
 [Reference](https://avogadro.cc/)
 
 [Download Qt](https://download.qt.io/archive/qt/4.8/4.8.5/)
+#### Extract the files and open a terminal at that location
+```diff
+./configure
+gmake
+sudo gmake install
+```
+
+
 #### Qt install
 ```diff
 sudo apt install -y libgtk2.0-dev libgtk-3-dev

@@ -55,6 +55,25 @@ cd ..
 ```
 #### This creates 'BURAI.desktop', copy this to Desktop
 #### Right click on the created desktop icon and press "Allow Launching"
+#### That's it but on running "scf" files the below error will pop up
+
+#### $\color{Red}{\textbf{Possible error on running: No pseudopotentials, please download files}}$
+#### $\color{Violet}{\textbf{This may be due to two reasons 1. Downloaded pseudopotentials is not in the location, 2. Wrong QE path}}$
+
+##### $\color{Green}{\textbf{Solution: 1. Downloaded pseudopotentials is not in the location}}$
+##### On running BURAI will search the pseudopotentials at ".burai/.pseudopot" which is available on the $HOME folder (It will be hidden so check the "Show Hidden Files" to view it)
+##### It will be empty
+##### $\color{Violet}{\textbf{OR}}$
+##### Open a terminal and 
+```diff
+ls cd .burai/.psedopot/
+```
+##### If it shows nothing, pseudopotentials are not in that folder but are available on the BURAI installation folder 
+##### We can do this by command line as follows
+```diff
+sudo cp -a ~/Downloads/BURAI1.3/pseudopot/. ~/.burai/.pseudopot
+```
+##### Change the installation directory if required
 
 ## $\color{Violet}{\textbf{2. SIESTA}}$
 #### SIESTA is both a method and its computer program implementation, to perform efficient electronic structure calculations and ab initio molecular dynamics simulations of molecules and solids.

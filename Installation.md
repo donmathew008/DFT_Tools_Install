@@ -126,7 +126,21 @@ sudo cp -a ~/Downloads/BURAI1.3/pseudopot/. ~/.burai/.pseudopot
 ##### Then login using the credentials
 [Login](https://www.quantum-espresso.org/login/)
 ##### Then download and unzip the files in a favourable location
-
+##### Open terminal in that location and execute 
+```diff
+cd qe-7.3.1-ReleasePack/qe-7.3.1/
+```
+##### $\color{Red}{\textbf{Check the version; folder name may be different}}$
+##### Execute the following
+```diff
+./configure
+```
+```diff
+make all
+```
+```diff
+sudo make install
+```
 
 
 ## $\color{Violet}{\textbf{3. SIESTA}}$

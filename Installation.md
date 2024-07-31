@@ -119,7 +119,17 @@ sudo cp -a ~/Downloads/BURAI1.3/pseudopot/. ~/.burai/.pseudopot
 ##### Normally no need to alter the "Path of MPI" section
 
 
-## $\color{Violet}{\textbf{2. SIESTA}}$
+## $\color{Violet}{\textbf{2. QUANTUM ESPRESSO}}$
+### $\color{Green}{\textbf{This is optional as we already have QE executables in BURAI}}$
+##### Initially register in Quantum Espresso
+[Register](https://www.quantum-espresso.org/register-user/)
+##### Then login using the credentials
+[Login](https://www.quantum-espresso.org/login/)
+##### Then download and unzip the files in a favourable location
+
+
+
+## $\color{Violet}{\textbf{3. SIESTA}}$
 #### SIESTA is both a method and its computer program implementation, to perform efficient electronic structure calculations and ab initio molecular dynamics simulations of molecules and solids.
 [Reference](https://docs.siesta-project.org/projects/siesta/en/latest/installation/legacy-build.html)
 
@@ -274,7 +284,7 @@ cd Downloads/siesta-4.1.5/Pseudo/atom-4.2.7-100/Tutorial/PS_Generation
 #### Alternate way to get Pseudo potential- Download from :
 [Here](https://nninc.cnf.cornell.edu/)
 
-## $\color{Violet}{\textbf{3. BoltzTraP2}}$
+## $\color{Violet}{\textbf{4. BoltzTraP2}}$
 #### BoltzTraP2 is a modern implementation of the smoothed Fourier interpolation algorithm for electronic bands that formed the base of the original and widely used BoltzTraP code. One of the most typical uses of BoltzTraP is the calculation of thermoelectric transport coefficients as functions of temperature and chemical potential in the rigid-band picture. 
 #### $\color{Green}{\textbf{Prerequisites/ Preparing the environment}}$
 [Reference](https://boltztrap2y.readthedocs.io/en/latest/BoltzTraP2.html)
@@ -324,7 +334,7 @@ pip3 install boltztrap2
 wget https://gitlab.com/sousaw/BoltzTraP2/-/archive/public/BoltzTraP2-public.tar.gz
 
 ```
-## $\color{Violet}{\textbf{4. Avogadro2}}$
+## $\color{Violet}{\textbf{5. Avogadro2}}$
 #### Avogadro 2 is a chemical editor and visualization application, it is also a set of reusable software libraries written in C++ using principles of modularity for maximum reuse
 #### Here we mention four methods to install Avogadro2 out of which some methods doesn't work 
 ## $\color{Blue}{\textbf{Method 1(Preferred)}}$
@@ -489,10 +499,10 @@ sudo apt-get install -y virtualbox virtualbox-qt
 #### Download the "AvogadroOrca4.2.1.current.exe" from this repository and install in Windows
 
 
-## $\color{Violet}{\textbf{5. ORCA}}$
+## $\color{Violet}{\textbf{6. ORCA}}$
 [Reference](https://orcaforum.kofo.mpg.de/app.php/dlext/?sid=214e8ecd094649b921d2ca62bad3a384)
 #### Just extract the files, that will do
-## $\color{Violet}{\textbf{6. WIEN2k}}$
+## $\color{Violet}{\textbf{7. WIEN2k}}$
 [Reference](http://susi.theochem.tuwien.ac.at/)
 #### This is a paid platform 
 

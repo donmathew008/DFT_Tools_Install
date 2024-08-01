@@ -365,7 +365,9 @@ wget https://gitlab.com/sousaw/BoltzTraP2/-/archive/public/BoltzTraP2-public.tar
 gmake --always-make
 sudo gmake install
 ```
-
+```diff
+sudo apt install -y qtcreator qtbase5-dev qt5-qmake cmake
+```
 
 #### Qt install
 ```diff

@@ -358,6 +358,12 @@ wget https://gitlab.com/sousaw/BoltzTraP2/-/archive/public/BoltzTraP2-public.tar
 #### Here we mention installation of Qt, Eigen, Cairo, wxWidgets, OpenBabel. Even thogh building Avogadro installs most of these packages, installing separately is preferred to find any unmet dependency
 [Reference](https://avogadro.cc/)
 
+#### Qt Install
+```diff
+sudo apt install -y qtcreator qtbase5-dev qt5-qmake cmake
+sudo apt-get install -y libxcb-cursor-dev
+```
+### OR
 [Download Qt](https://download.qt.io/archive/qt/4.8/4.8.5/)
 #### Extract the files and open a terminal at that location
 ```diff
@@ -365,12 +371,7 @@ wget https://gitlab.com/sousaw/BoltzTraP2/-/archive/public/BoltzTraP2-public.tar
 gmake --always-make
 sudo gmake install
 ```
-```diff
-sudo apt install -y qtcreator qtbase5-dev qt5-qmake cmake
-sudo apt-get install -y libxcb-cursor-dev
-```
-
-#### Qt install
+### OR
 ```diff
 sudo apt install -y libgtk2.0-dev libgtk-3-dev
 sudo add-apt-repository ppa:rock-core/qt4

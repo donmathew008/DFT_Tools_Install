@@ -367,6 +367,7 @@ sudo gmake install
 ```
 ```diff
 sudo apt install -y qtcreator qtbase5-dev qt5-qmake cmake
+sudo apt-get install -y libxcb-cursor-dev
 ```
 
 #### Qt install

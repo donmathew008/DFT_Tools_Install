@@ -1,0 +1,36 @@
+with_mpi="yes"
+enable_mpi_io="yes"
+enable_openmp="yes"
+
+#with_linalg="/usr"
+with_linalg_flavor="openblas"
+LINALG_LIBS="-L/usr/lib/x86_64-linux-gnu -llapack -lblas -lscalapack-openmpi"
+
+
+with_fft="yes"
+FFT_LIBS="-L/usr/lib/x86_64-linux-gnu -lfftw3"
+
+#with_fftw3="yes"
+#FFTW3_LIBS="-L/usr/lib/x86_64-linux-gnu -lfftw3"
+
+#with_libxc=/home/INSTALL/abinit-10.0.7/build/fallbacks/install_fb/gnu/11.4/libxc/6.0.0/lib
+#LIBXC_LIBS="-L/opt/etsf/lib -lxcf90 -lxc -lm"
+
+with_libxc="/opt/etsf"
+LIBXC_CPPFLAGS="-I/opt/etsf/include"
+LIBXC_CFLAGS="-I/opt/etsf/include"
+LIBXC_FCFLAGS="-I/opt/etsf/include"
+LIBXC_LDFLAGS=""
+LIBXC_LIBS="-L/opt/etsf/lib -lxcf90 -lxc"
+
+
+with_hdf5="yes"
+
+with_netcdf="yes"
+
+with_wannier90="yes"
+#WANNIER90_FCFLAGS="-I/usr/local/bin/wannier90"
+#WANNIER90_LDFLAGS=""
+WANNIER90_LIBS="$HOME/Downloads/wannier90-3.1.0/libwannier.a"
+
+#/opt/etsf/lib/

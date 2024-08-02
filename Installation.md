@@ -528,7 +528,62 @@ sudo apt-get install -y virtualbox virtualbox-qt
 ## $\color{Violet}{\textbf{6. ORCA}}$
 [Reference](https://orcaforum.kofo.mpg.de/app.php/dlext/?sid=214e8ecd094649b921d2ca62bad3a384)
 #### Just extract the files, that will do
+
+
 ## $\color{Violet}{\textbf{7. WIEN2k}}$
 [Reference](http://susi.theochem.tuwien.ac.at/)
 #### This is a paid platform 
 
+
+## $\color{Violet}{\textbf{8. ABINIT}}$
+[Reference](https://www.abinit.org/)
+
+#### Before installation, we need three more packages namely "netCDF4", "LibXC" & "Libtool"
+#### netCDF4 Installation
+```diff
+pip install netCDF4
+```
+#### LibXC Installation
+[Reference](https://libxc.gitlab.io/)
+[Download](https://gitlab.com/libxc/libxc/-/archive/6.2.2/libxc-6.2.2.tar.bz2)
+#### Extract the files and open a terminal in that location and execute
+```diff
+autoreconf -i
+```
+```diff
+./configure --prefix=PATH/TO/LIBXC
+```
+```diff
+make
+```
+```diff
+make check
+```
+```diff
+sudo make install
+```
+
+#### Libtool Installation
+[Reference](https://www.gnu.org/software/libtool/)
+[Download](https://ftpmirror.gnu.org/libtool/libtool-2.4.7.tar.gz)
+#### Extract the files and open a terminal in that location and execute
+```diff
+./configure
+```
+```diff
+make
+```
+```diff
+sudo make install
+```
+
+#### ABINIT Installation
+
+[Download](https://github.com/abinit/abinit/archive/refs/tags/10.0.7.tar.gz)
+#### Extract the files and open a terminal in that location and execute
+```diff
+./autogen.sh
+```
+```diff
+
+```

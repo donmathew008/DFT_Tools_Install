@@ -551,8 +551,13 @@ pip install netCDF4
 autoreconf -i
 ```
 ```diff
+./configure
+```
+#### OR the below command provide the 3rd derivatives of energy!
+```diff
 ./configure --enable-kxc
 ```
+##### This was not working
 ```diff
 make
 ```

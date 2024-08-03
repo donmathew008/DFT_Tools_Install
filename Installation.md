@@ -595,7 +595,16 @@ hostname
 ```
 ##### In our case the system name is "vincent" so the file is "vincent.ac9", which is also attatched in this repository for reference
 ##### Modify this accordingly 
-
+##### Execute the following from the build directory
 ```diff
-../configure --with-config-file=vincent.ac9 >> output.out
+../configure --with-config-file=vincent.ac9
 ```
+```diff
+make
+```
+```diff
+make check
+```
+```diff
+sudo make install
+``

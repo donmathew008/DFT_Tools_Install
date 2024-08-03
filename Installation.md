@@ -551,7 +551,7 @@ pip install netCDF4
 autoreconf -i
 ```
 ```diff
-./configure --prefix=PATH/TO/LIBXC
+./configure --enable-kxc
 ```
 ```diff
 make
@@ -577,7 +577,7 @@ make
 sudo make install
 ```
 
-#### ABINIT Installation
+#### ABINIT Installation (Custom Build)
 
 [Download](https://github.com/abinit/abinit/archive/refs/tags/10.0.7.tar.gz)
 #### Extract the files and open a terminal in that location and execute
@@ -585,5 +585,17 @@ sudo make install
 ./autogen.sh
 ```
 ```diff
+mkdir build && cd build
+```
+##### The configuration template is available as "$HOME/INSTALL/abinit-10.0.7/doc/build/config-template.ac9"
+##### Copy this template to the build folder we made and rename with your system hostname, or simply the name of your system; which is the prefix to "@" symbol when you open a terminal
+##### Still if you are confused use terminal to execute
+```diff
+hostname
+```
+##### In our case the system name is "vincent" so the file is "vincent.ac9", which is also attatched in this repository for reference
+##### Modify this accordingly 
 
+```diff
+../configure --with-config-file=vincent.ac9 >> output.out
 ```

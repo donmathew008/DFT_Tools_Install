@@ -592,18 +592,8 @@ sudo make install
 ```diff
 mkdir build && cd build
 ```
-##### The configuration template is available as "$HOME/INSTALL/abinit-10.0.7/doc/build/config-template.ac9"
-##### Copy this template to the build folder we made and rename with your system hostname, or simply the name of your system; which is the prefix to "@" symbol when you open a terminal
-##### Still if you are confused use terminal to execute
-```diff
-hostname
-```
-##### In our case the system name is "vincent" so the file is "vincent.ac9", which is also attatched in this repository for reference
-##### Modify this accordingly 
-##### Execute the following from the build directory
 ```diff
 ../configure --with-mpi --with-libxc="/opt/etsf" --with-fftw3 FFTW3_LIBS="$HOME/INSTALL/fftw-3.3.10/.libs/libfftw3.a" --with-wannier90 WANNIER90_LIBS="$HOME/INSTALL/wannier90-3.1.0/libwannier.a"
-
 ```
 ```diff
 make

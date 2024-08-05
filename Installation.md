@@ -593,10 +593,10 @@ sudo make install
 mkdir build && cd build
 ```
 ```diff
-../configure --with-mpi --with-libxc="/opt/etsf" --with-fftw3 FFTW3_LIBS="$HOME/INSTALL/fftw-3.3.10/.libs/libfftw3.a" --with-wannier90 WANNIER90_LIBS="$HOME/INSTALL/wannier90-3.1.0/libwannier.a"
+../configure --with-config-file=vincent.ac9
 ```
 ```diff
-make
+make -j4
 ```
 ```diff
 make check

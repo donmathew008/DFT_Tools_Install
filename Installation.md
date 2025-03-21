@@ -141,6 +141,10 @@ make all
 ```diff
 sudo make install
 ```
+##### If this doesn't work configure it with the following
+```diff
+./configure MPIF90=/home/vincent/INSTALL/openmpi-5.0.7/build/bin/mpif90 F90=/home/vincent/INSTALL/openmpi-5.0.7/build/bin/mpif90 CC=/home/vincent/INSTALL/openmpi-5.0.7/build/bin/mpicc --enable-parallel --with-fft=/home/vincent/INSTALL/fftw-3.3.10/build
+```
 
 
 ## $\color{Violet}{\textbf{3. SIESTA}}$
